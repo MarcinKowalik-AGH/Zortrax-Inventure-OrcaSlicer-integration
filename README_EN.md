@@ -55,22 +55,7 @@ examples/                             # example Machine G-code and post-processi
 
 Details: [`docs/en/INSTALLATION.md`](docs/en/INSTALLATION.md).
 
-### How to upload this project to GitHub
 
-The simplest method is to create an empty repository on GitHub, unpack this package locally, and run:
-
-```bash
-git init
-git add .
-git commit -m "Initial Zortrax Inventure OrcaSlicer integration v1.01"
-git branch -M main
-git remote add origin https://github.com/<your-login>/zortrax-inventure-orca.git
-git push -u origin main
-git tag v1.01
-git push origin v1.01
-```
-
-Full guide: [`docs/en/GITHUB_PUBLISHING.md`](docs/en/GITHUB_PUBLISHING.md).
 
 ### Warning
 
