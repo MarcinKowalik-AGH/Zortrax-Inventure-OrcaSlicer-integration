@@ -120,11 +120,6 @@ examples/                             # example Machine G-code and post-processi
 
 Details: [`docs/en/INSTALLATION.md`](docs/en/INSTALLATION.md).
 
-### How to upload this project to GitHub
-
-The simplest method is to create an empty repository on GitHub, unpack this package locally, and run:
-
-
 
 ### Warning
 
