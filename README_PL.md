@@ -56,22 +56,6 @@ examples/                             # przykładowe pola G-code i ścieżki pos
 
 Szczegóły: [`docs/pl/INSTALLATION.md`](docs/pl/INSTALLATION.md).
 
-### Jak wgrać projekt na GitHub
-
-Najprościej: utwórz puste repozytorium na GitHubie, rozpakuj tę paczkę lokalnie, a następnie wykonaj:
-
-```bash
-git init
-git add .
-git commit -m "Initial Zortrax Inventure OrcaSlicer integration v1.01"
-git branch -M main
-git remote add origin https://github.com/<twoj-login>/zortrax-inventure-orca.git
-git push -u origin main
-git tag v1.01
-git push origin v1.01
-```
-
-Pełna instrukcja: [`docs/pl/GITHUB_PUBLISHING.md`](docs/pl/GITHUB_PUBLISHING.md).
 
 ### Ostrzeżenie
 
