@@ -1,0 +1,135 @@
+{
+  "version": "2026-05-03-current",
+  "notes": [
+    "E_SPEED_SCALE and RETRACT_SPEED_SCALE scale feedrate F, not E length.",
+    "Bin/waste purge-clean procedures over bucket are not printed tower geometry.",
+    "Orca prime tower may be treated functionally as Z-Suite cooling tower, separate from bin purge.",
+    "OP0E/OP16 observed as chamber temp, not acceleration.",
+    "Classic .zcode acceleration table per feature not found; Orca acceleration values are proposals."
+  ],
+  "native_material_codes_observed": {
+    "Z-ABS legacy/native": "0x00",
+    "Z-ULTRAT": "0x01",
+    "Z-GLASS": "0x02",
+    "Z-HIPS": "0x03",
+    "Z-PCABS": "0x04",
+    "Z-PETG": "0x05",
+    "Z-ULTRAT Plus": "0x06",
+    "Z-SUPPORT": "0x07",
+    "Z-ESD": "0x08",
+    "Z-PHA": "0x09",
+    "Z-PLA": "0x0A",
+    "Z-PLA Pro": "0x0B",
+    "Z-ASA Pro": "0x0C",
+    "Z-SUPPORT Plus": "0x0D",
+    "Z-SemiFlex": "0x0E",
+    "Z-FLEX": "0x0F",
+    "Z-NYLON": "0x10",
+    "Z-SUPPORT Premium": "0x11",
+    "Z-PEEK": "0x12"
+  },
+  "external_header_codes_observed": {
+    "ABS-based filament": "0x81",
+    "PETG-based filament": "0x83",
+    "GLASS-type filament": "0x84",
+    "PLA-based filament": "0x86",
+    "FLEX-based filament": "0x87",
+    "NYLON-based filament": "0x89",
+    "ULTRAT-based filament": "0x91",
+    "ESD PETG-based filament": "0x92",
+    "PLA Pro-based filament": "0x94",
+    "ASA Pro-based filament": "0x95",
+    "SEMIFLEX-based filament": "0x96"
+  },
+  "confirmed_dual_t0_clean": {
+    "old_retract": {
+      "F": 480,
+      "area": "F3",
+      "E_mm": -20.0,
+      "then": "RESTORE E0"
+    },
+    "select": "T0",
+    "pos": "00",
+    "steps": [
+      {
+        "F": 480,
+        "area": "F4",
+        "E_mm": 21.0
+      },
+      {
+        "F": 2000,
+        "area": "FE",
+        "E_mm": 22.0
+      },
+      {
+        "DWELL_ms": 3000
+      },
+      {
+        "clean_path": "0A->08->09->07->0A->08->00"
+      },
+      {
+        "F": 2000,
+        "area": "FD",
+        "E_mm": 21.0
+      },
+      {
+        "RESTORE": "E0"
+      }
+    ]
+  },
+  "confirmed_dual_t1_clean": {
+    "old_retract": {
+      "F": 480,
+      "area": "E9",
+      "E_mm": -20.0,
+      "then": "RESTORE E0"
+    },
+    "select": "T1",
+    "pos": "00",
+    "steps": [
+      {
+        "F": 480,
+        "area": "EA",
+        "E_mm": 22.02
+      },
+      {
+        "F": 3600,
+        "area": "FE",
+        "E_mm": 24.04
+      },
+      {
+        "DWELL_ms": 3000
+      },
+      {
+        "clean_path": "09->07->0A->08->09->07->00"
+      },
+      {
+        "F": 3600,
+        "area": "FD",
+        "E_mm": 22.04
+      },
+      {
+        "RESTORE": "E0"
+      }
+    ]
+  },
+  "raft_rules": {
+    "brim_when_raft_on": "disabled/no area 0x22",
+    "byte72": "effective raft",
+    "negative_layers": "-(effective+1)..-1",
+    "single": "0x0A x2, 0x0B x1, 0x0C x1 for effective=4; 0x0C x2 for observed effective>=6; remaining 0x0D",
+    "dual": "observed 0x0A x2, 0x0B x1, 0x0C x1, remaining 0x0D"
+  },
+  "missing_full_samples": [
+    "Z-HIPS",
+    "Z-PCABS",
+    "Z-ULTRAT Plus",
+    "Z-ESD",
+    "Z-PHA",
+    "Z-SemiFlex native",
+    "Z-PEEK",
+    "Z-SUPPORT real dual support",
+    "Z-SUPPORT Plus real dual support",
+    "BVOH/BASF real support"
+  ]
+}

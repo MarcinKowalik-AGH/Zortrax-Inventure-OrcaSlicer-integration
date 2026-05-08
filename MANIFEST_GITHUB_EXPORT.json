@@ -1,0 +1,423 @@
+{
+  "package": "Zortrax-Inventure-OrcaSlicer-integration",
+  "version": "v1.4.16",
+  "export_date": "2026-05-08",
+  "source_package": "Zortrax_Inventure_Orca_PRODUCTION_v1.4.16_converter_configs_2026-05-06.zip",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 41,
+      "sha256": "b54d069610e76eb9cd45861fc86e2cdacc0404de04a941b5c55feb58bd9f5dbb"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 3442,
+      "sha256": "25286c45f5d4029f883a4ff13d983ae40d1682b720a1165a6b6c609b0de53023"
+    },
+    {
+      "path": "README.md",
+      "size": 3278,
+      "sha256": "4e00c58f7b1de9fde52668453a70e8c86811953ac0d6ff45b7998cc21af50e19"
+    },
+    {
+      "path": "README_PL.md",
+      "size": 3398,
+      "sha256": "e0c55e3eea70620929c36270dce59f794b60e999a4c9496830c4635e526cb3e8"
+    },
+    {
+      "path": "VERSION",
+      "size": 8,
+      "sha256": "8eb688e79b05f1a29aaa27d41d0929aab4588b6ead1d69c84c0aced341f75101"
+    },
+    {
+      "path": "build/README_BUILD.md",
+      "size": 943,
+      "sha256": "bc199ec58e720f922385b04db2e76ff5fe41682223ebd0053219065151ea377c"
+    },
+    {
+      "path": "build/build_pyinstaller_macos_linux.sh",
+      "size": 449,
+      "sha256": "48c01c45d987870fd03e4b9e822dbdf058fc593c3f7c0bf5dc19169bb1a6e4e4"
+    },
+    {
+      "path": "build/build_pyinstaller_windows.bat",
+      "size": 437,
+      "sha256": "8bab86bdbdab5b1e05a301a454d23104daf8dd92cdf4d43b3c2476d642df9528"
+    },
+    {
+      "path": "build/requirements-build.txt",
+      "size": 17,
+      "sha256": "5a4eece01540b941f8295113419854ea879575b156cd9c34b0461292ceaede3c"
+    },
+    {
+      "path": "converter/g2z_wrapper_orca.py",
+      "size": 18824,
+      "sha256": "e13358a1dc7d1829e3086546676ad68f4a0f899eb5d9a0b690add0a2bceb391a"
+    },
+    {
+      "path": "converter/g2z_wrapper_orca_base_lab14_known_good.py",
+      "size": 211221,
+      "sha256": "d906dee97c7870f9710a824f60bed6933917c0144886be1b3b282c23105e2f9a"
+    },
+    {
+      "path": "converter/run_g2z_orca_postprocess.bat",
+      "size": 129,
+      "sha256": "c2f06116a76945565cdc2d4c67c1c096cac3cffc55c426f0f9dcce6b3558e200"
+    },
+    {
+      "path": "converter/run_g2z_orca_postprocess.command",
+      "size": 102,
+      "sha256": "9794cc798842900eeda5f0c37d00b9642abf7309dfeb82469b03bdcab5ae19b9"
+    },
+    {
+      "path": "converter/run_g2z_orca_postprocess.sh",
+      "size": 134,
+      "sha256": "42618a7ad6d5235a2e782d5525867130d632b0655ac9285fc5f348bd4d2ab914"
+    },
+    {
+      "path": "docs/analysis_databases/b1_b3_OP02_scaling_comparison.csv",
+      "size": 2927,
+      "sha256": "736642b1b65e033c96590c2b9a887eb3a0cb443e99a514f0e039c674f841d693"
+    },
+    {
+      "path": "docs/analysis_databases/material_coverage_after_w_semiflex.csv",
+      "size": 1814,
+      "sha256": "d8f24660bbe0b43375a819fca334642838c449eefdeaac848537e6078b9a4417"
+    },
+    {
+      "path": "docs/analysis_databases/op02_area_semantics_and_orca_mapping_v2.csv",
+      "size": 2198,
+      "sha256": "5d01232c7fe6ca92fbf16e9fbb2cb87cf4789d93fc2835c6f0c396b920c02444"
+    },
+    {
+      "path": "docs/analysis_databases/orca_acceleration_proposal.csv",
+      "size": 1139,
+      "sha256": "ab694b4d274d211867e5fe81e65992ab59ed671fcdb33e60b7294615fe75dfdf"
+    },
+    {
+      "path": "docs/analysis_databases/orca_speed_table_representatives.csv",
+      "size": 2699,
+      "sha256": "3c8d25beb8e87c903676cc26eb1c119b8e5eff646c79df0f5b9aba237d694eda"
+    },
+    {
+      "path": "docs/analysis_databases/purge_retract_speed_database_increment_w_semiflex.json",
+      "size": 61618,
+      "sha256": "2d56ed235fa9befed63f54133527e8d3dc2d56e5505f03a4e6c1f7b19b5d1ee9"
+    },
+    {
+      "path": "docs/analysis_databases/purge_retract_temperature_speed_database_FULL_v2026-05-03.json",
+      "size": 8536,
+      "sha256": "f092e374958964d2bdbc3c8f93b4042b7a55839830a0cb612bf38987a7391445"
+    },
+    {
+      "path": "docs/analysis_databases/speed_accel_material_database_v2026-05-03.json",
+      "size": 21110,
+      "sha256": "cebeb78d16661d3857e5d4b011d5b7ef8076b5990e96680a9577d8bc2fd9447f"
+    },
+    {
+      "path": "docs/analysis_databases/v148_process_speed_targets.csv",
+      "size": 539,
+      "sha256": "d281a81938bd1d4b76d83c8e28c20480a4730379e99e0d61c623a87e6041d4f5"
+    },
+    {
+      "path": "docs/en/INSTALL.md",
+      "size": 1729,
+      "sha256": "ffddf86dfbbaffa06ef5c7c4a6220f8384dd57d239e68bad65baaf0e5126deb1"
+    },
+    {
+      "path": "docs/en/MACHINE_GCODE.md",
+      "size": 2176,
+      "sha256": "c52abdfa338bf23b930644f5001396101a21d3faf1fcfc0fdc3dbae00532cb47"
+    },
+    {
+      "path": "docs/en/MATERIAL_DATABASE.md",
+      "size": 971,
+      "sha256": "245ac5c2e6dfd32856923f769b7cd0b6199dc7aecdc5404b704ae30a7d9c1fb5"
+    },
+    {
+      "path": "docs/en/PROFILE_SUFFIX_POLICY.md",
+      "size": 407,
+      "sha256": "e7febcbbcc31e08a1e5bf51bf858a5befc4fb37202934c8b7849cf961d0262bc"
+    },
+    {
+      "path": "docs/en/RELEASE_NOTES.md",
+      "size": 1668,
+      "sha256": "5145dd1625d15a6f929e89935732033ab163c15c89096f31e95976d9bb6671ab"
+    },
+    {
+      "path": "docs/en/REVERSE_ENGINEERING_NOTES.md",
+      "size": 650,
+      "sha256": "b5900c4f2061496da44d9740ca318627301179d26267e165d68a83ab4dbd66f1"
+    },
+    {
+      "path": "docs/en/TROUBLESHOOTING.md",
+      "size": 877,
+      "sha256": "ddc3b2bc72737acbf614102038cdf16fae9646d4e5b9e6204551cc3d9ddafc32"
+    },
+    {
+      "path": "docs/en/UPDATE_FROM_v1.01.md",
+      "size": 970,
+      "sha256": "0ecf6913f47c78df43daf5fdd1b10ef787952514c760cd1ca210847895d02a59"
+    },
+    {
+      "path": "docs/en/ZORTRAX_LOAD_FILAMENT.md",
+      "size": 1101,
+      "sha256": "64c8d2972e0677cd1d10eaf73d76335d272efc74ea5023d633a763aa82df1e5e"
+    },
+    {
+      "path": "docs/en/ZSUITE_AUTOMATRIX.md",
+      "size": 472,
+      "sha256": "3582e4cd1fa188b78d538bde3912c29ed3f1fb3f343b9f74a49a8eff7f785498"
+    },
+    {
+      "path": "docs/original_converter_docs/AUTO_TEMP_SPEED_SCALE_POLICY_v1.4.14.md",
+      "size": 1443,
+      "sha256": "751bc921c60236515dfb2e8c54785d88983b398b2b51583c14c330f73c8dc374"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.1.md",
+      "size": 1827,
+      "sha256": "46484a5390a798755244fc8cdeab3fb12abcef14b32e0f944279d874078791ef"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.10.md",
+      "size": 657,
+      "sha256": "4531337c643aeaee10da5acb13d747d344d210604e42e5c79f1a5a323545e65a"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.11.md",
+      "size": 846,
+      "sha256": "0e6e421f3df361b9c795a3b0436bd718edb5cc5b541a1c055b7c5bfa4a265bf8"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.1_latest_material_db.md",
+      "size": 722,
+      "sha256": "35a0ac9144ce18564ea7bd1ea1cfe998213cf294f3c1877bded47b3caedab706"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.2.md",
+      "size": 872,
+      "sha256": "d66156989debeb9bd6dffd86f1fc0b0a547a4864c2a0613a3a46bf5f25a19efc"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.5.md",
+      "size": 1035,
+      "sha256": "3226c0bd744bfd1fc134c29ada198711dd510bc8cabe40d39ca02c9ececacd67"
+    },
+    {
+      "path": "docs/original_converter_docs/CHANGELOG_v1.4.8.md",
+      "size": 689,
+      "sha256": "1466315260b98beeb53ed899319e2c67bcffd7f8a70cdd0fbdb73cc726f127c6"
+    },
+    {
+      "path": "docs/original_converter_docs/LAB38_SAFE_HOTFIX_v1.4.2.md",
+      "size": 1129,
+      "sha256": "f031439fb751723cf5807053a55ab7a2dece3601ae4d83a9d5c3642f8c47a0b1"
+    },
+    {
+      "path": "docs/original_converter_docs/LATEST_MATERIAL_PURGE_RAFT_SPEED_DATABASE_2026-05-03.md",
+      "size": 2967,
+      "sha256": "1c0abc3ae47373b309878caf369856fca993ed1a6251fbda84a9e95c01776d3d"
+    },
+    {
+      "path": "docs/original_converter_docs/LAYER_CLEAN_DUAL_SMART_RESTORE_v1.4.15.md",
+      "size": 511,
+      "sha256": "21b1f4bf1b70e4e8ef8f18ecc4349ac2196d40c48612cda4c5c5a334c9203e8c"
+    },
+    {
+      "path": "docs/original_converter_docs/OP02_SPEED_SEMANTICS_v1.4.8.md",
+      "size": 2094,
+      "sha256": "0043f75395a681bf398e449bb0e51d6883fc5bcb247975cf2462dc5da79d73f8"
+    },
+    {
+      "path": "docs/original_converter_docs/ORCA_MACHINE_GCODE_v1.4.1.md",
+      "size": 2014,
+      "sha256": "2be07d903d9e69bdd3d688f11f17d11a61f9078bf55555e80d62d84569cd3419"
+    },
+    {
+      "path": "docs/original_converter_docs/PROFILE_SUFFIX_POLICY_v1.4.13.md",
+      "size": 1337,
+      "sha256": "69819b2c1e1b9c9876e38226ea2c0e1aca093150fdce967cc84f09e0012a589a"
+    },
+    {
+      "path": "docs/original_converter_docs/README_v1.4.1.md",
+      "size": 4285,
+      "sha256": "6da980dea6164969b1c7713710a525e3fc39efdf7ddb8995107f30675c261d3a"
+    },
+    {
+      "path": "docs/original_converter_docs/T0_ZSUITE_CLEAN_FIX_v1.4.1.md",
+      "size": 1498,
+      "sha256": "56ee45fb641340193a3398e84049525b0e014effe34e62b7a1b40a7fd9627000"
+    },
+    {
+      "path": "docs/original_converter_docs/WRAPPER_AND_SCRIPTS_SUMMARY_v1.4.1.md",
+      "size": 3870,
+      "sha256": "65812f32519058b50e7b0e183b6e9e9253b343c181a68657c8682b9017ad1459"
+    },
+    {
+      "path": "docs/original_converter_docs/ZORTRAX_LOAD_FILAMENT_v1.4.16.md",
+      "size": 1096,
+      "sha256": "3081f35ad67273f980cd6224252d3ce135a17775a1a110ea78c361ec469d64ca"
+    },
+    {
+      "path": "docs/original_converter_docs/ZSUITE_HINTS_INTEGRATION_v1.4.4.md",
+      "size": 1971,
+      "sha256": "8b7d214caaaa4996e01b2e398aa2a07ab225fe4219b388fc932db27a522188d5"
+    },
+    {
+      "path": "docs/original_converter_docs/ZSUITE_STATIC_EXTRACTION_2026-05-03.md",
+      "size": 4219,
+      "sha256": "0d5b33c03d954841e9757025f7f7dbf473b0002d9cb8811ed0b50e6354a7e91e"
+    },
+    {
+      "path": "docs/original_converter_docs/material_purge_raft_speed_database_2026-05-03.json",
+      "size": 3203,
+      "sha256": "5a86462dcc48c5a00ff4aa1a78b23403f3968f9dc144741f601770fda1d94d44"
+    },
+    {
+      "path": "docs/original_converter_docs/zsuite_static_facts_2026-05-03.json",
+      "size": 2189,
+      "sha256": "b95c46abec93e56ef183375c7b4b18f00c8e069bb035e86f99d91648ddc9e460"
+    },
+    {
+      "path": "docs/pl/INSTALL_PL.md",
+      "size": 1765,
+      "sha256": "81c0acceb1e2dd9ac8ba05f737ce43c0313490ca7f1098642cfa054fb0b5a2cb"
+    },
+    {
+      "path": "docs/pl/MACHINE_GCODE_PL.md",
+      "size": 2189,
+      "sha256": "f93283c786b8697de6236959c28b9939be0ed2b81369b4c3531f3f964a7d8d8f"
+    },
+    {
+      "path": "docs/pl/MATERIAL_DATABASE_PL.md",
+      "size": 977,
+      "sha256": "f608ae11524909907be01c011a6d8fe3c85922c2710e13db5127249327a8ce65"
+    },
+    {
+      "path": "docs/pl/PROFILE_SUFFIX_POLICY_PL.md",
+      "size": 394,
+      "sha256": "aafed9350a6177112feecaddd8ec3459ee992899e44be7b85fc0052e7b6c73ed"
+    },
+    {
+      "path": "docs/pl/RELEASE_NOTES_PL.md",
+      "size": 1767,
+      "sha256": "8332d4fe44e29b9e98b3cf4697b936df7c2662e6ece5c05c45d20c6bbc97ee02"
+    },
+    {
+      "path": "docs/pl/REVERSE_ENGINEERING_NOTES_PL.md",
+      "size": 700,
+      "sha256": "a28914aab3c0dabab10fdfa01031a01fa306d33e1ca199aeb44fb09e445ffa62"
+    },
+    {
+      "path": "docs/pl/TROUBLESHOOTING_PL.md",
+      "size": 991,
+      "sha256": "a236ebdb54d9782f42e8395c31f205cbe2748ff1a624dd279cd34f70ae7ebe44"
+    },
+    {
+      "path": "docs/pl/UPDATE_FROM_v1.01_PL.md",
+      "size": 986,
+      "sha256": "0ecfe05647159f9d316f39b8c38469b98854b4b2d7811401bef72343fa3ef2a9"
+    },
+    {
+      "path": "docs/pl/ZORTRAX_LOAD_FILAMENT_PL.md",
+      "size": 1096,
+      "sha256": "3081f35ad67273f980cd6224252d3ce135a17775a1a110ea78c361ec469d64ca"
+    },
+    {
+      "path": "docs/pl/ZSUITE_AUTOMATRIX_PL.md",
+      "size": 484,
+      "sha256": "92a8ba54ab7ab8bd44a6e5fbbbf133e40db3219a79a49afa45964b913e1f76e8"
+    },
+    {
+      "path": "examples/README.md",
+      "size": 212,
+      "sha256": "5e8fb8555f99ad01b6a5e2e954e49087c8f61a8070adf85dcbdd3a840e188159"
+    },
+    {
+      "path": "examples/dual_machine_gcode_snippet.gcode",
+      "size": 1500,
+      "sha256": "0c2f89b358cb1602164c1bad621bc0d5f344d90a6b851b32165ed817f0772c96"
+    },
+    {
+      "path": "examples/load_filament_examples.gcode",
+      "size": 221,
+      "sha256": "920a79453f0b3ea2379ff74bee879eaf2404eff684576ed242741b6e79712a3b"
+    },
+    {
+      "path": "examples/single_machine_gcode_snippet.gcode",
+      "size": 498,
+      "sha256": "c940bf83943b96f20783f94e682b53ad5ac7437d190ecc654c77ecbcb79ed57e"
+    },
+    {
+      "path": "orca_presets/Zortrax Inventure 0.4 nozzle - dual_v1.4.14_current_converter.orca_printer",
+      "size": 91732,
+      "sha256": "4f1a97218d67a4278b4da6117c214991f06549f7fcf6388c5709847acebbeafa"
+    },
+    {
+      "path": "orca_presets/Zortrax Inventure 0.4 nozzle - single_v1.4.14_current_converter.orca_printer",
+      "size": 91170,
+      "sha256": "1bd4658da362a4d86b4929c72b2b6bba1d901cd2a3bf6256733e5232e29274c3"
+    },
+    {
+      "path": "orca_presets/Zortrax_Inventure_Orca_presets_v1.4.14_current_converter.zip",
+      "size": 170978,
+      "sha256": "2997ed48e4db570a9adf0a52284a7c6fc238eb73d5cfb8351844d6ecb73c95c7"
+    },
+    {
+      "path": "orca_presets/Zortrax_Inventure_Orca_presets_v1.4.14_current_converter_report.md",
+      "size": 4246,
+      "sha256": "9eae7e3eb3a7759456f4c25a475139f14d01fe3dd82c7158ec69d568cc530029"
+    },
+    {
+      "path": "repo_file_list.txt",
+      "size": 3780,
+      "sha256": "e08751725ca3c001d828b746e610e4dfda20a4cc908da83c219ace6f1b990835"
+    },
+    {
+      "path": "reports/LAB38_REPRODUCE_1TO1_report.json",
+      "size": 1820,
+      "sha256": "89a22471b0f4206e533204a5c0916c0e3189b831bb9dcbe89f2bc5805ec1f3e5"
+    },
+    {
+      "path": "reports/cone_LAB42B_report.json",
+      "size": 828,
+      "sha256": "c4852b433ea6d12de0ed2fdd4cc9b05ab816eb0fea9f424235d2cf733f1fa411"
+    },
+    {
+      "path": "reports/v1.4.1_reference_stats.txt",
+      "size": 1249,
+      "sha256": "0dc5f70200d04c498050454640dbc49210ea565633bc8703bac54798a1316aa9"
+    },
+    {
+      "path": "source_context/ZORTRAX_INVENTURE_GITHUB_EXPORT_BRIEF_FOR_NEXT_CHAT_2026-05-08.md",
+      "size": 20049,
+      "sha256": "60c44e8e3748cc654bd73020baa8ad0659c1fd63b1e29232729334d3f2fd75bc"
+    },
+    {
+      "path": "source_context/ZORTRAX_INVENTURE_PROJECT_SOURCE_MASTER_2026-05-05.md",
+      "size": 321192,
+      "sha256": "4e9910305c9436ff99a9f8f62cb0dfd5c9d376e86a53917c07637c3a6fe2d236"
+    },
+    {
+      "path": "tests_reference/README.md",
+      "size": 374,
+      "sha256": "3b01c1cf026c7b941c8ca651672b7d936d7a915e4207b3dbde0cf306190f02c9"
+    },
+    {
+      "path": "tools/lab42_insert_initial_progress_reference.py",
+      "size": 1321,
+      "sha256": "cf0518fd21c2982fedeca554c4855d71d25bca98f75cdf790af7a023eb5acc26"
+    },
+    {
+      "path": "tools/reproduce_lab38_single.py",
+      "size": 776,
+      "sha256": "338ef7c042a8373a460df0350d5cfbe805f4f4b4499cc4da64af7dfd909d2ac6"
+    },
+    {
+      "path": "tools/zcode_stats.py",
+      "size": 1023,
+      "sha256": "6e37b87b9e1570ffb9f45dc109a10b2aba84634dc1ed9615e4668ab751bbda39"
+    }
+  ]
+}

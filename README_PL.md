@@ -1,63 +1,88 @@
-# Zortrax Inventure + OrcaSlicer integration / Integracja Zortrax Inventure z OrcaSlicer
+# Zortrax Inventure + OrcaSlicer integration
 
-## Polski
+**Aktualny eksport GitHub:** `v1.4.16`  
+**Konwerter:** `v1.4.16-production-load-filament-marker-2026-05-06`  
+**Konwerter bazowy:** `v1.4.16-base-LAB38-safe-load-filament-marker-2026-05-06`  
+**Presety Orca:** `v1.4.14_current_converter`  
+**Data eksportu:** `2026-05-08`
 
-Projekt zawiera konfiguracje OrcaSlicer oraz konwerter post-processingu umożliwiający przygotowanie plików `.zcode` dla drukarki **Zortrax Inventure** bez używania Z-Suite jako slicera.
+Projekt umożliwia przygotowywanie klasycznych plików `.zcode` dla **Zortrax Inventure** bezpośrednio z **OrcaSlicer**, z użyciem konwertera post-process w pure Python. Celem jest jak najwierniejsze odtworzenie kluczowego zachowania Z-Suite: pól nagłówka `.zcode`, kodów materiałów, trybów single/dual, obsługi supportu, procedur startu, purge/clean nad koszem, toolchange-clean, semantyki raft/seam/tower oraz wybranych metadanych potrzebnych firmware Inventure.
 
-Aktualna paczka: **v1.01**.
+> To projekt reverse engineeringu. Najpierw testować krótkie wydruki i ostrożnie traktować wpisy eksperymentalne.
 
-### Co zawiera repozytorium
+## Co zawiera paczka
 
 ```text
-scripts/
-  g2z_wrapper_orca.py                 # główny konwerter G-code -> classic .zcode
-  run_g2z_orca_postprocess.bat        # launcher Windows dla Orca post-processing
-  run_g2z_orca_postprocess.sh         # launcher macOS/Linux
-  run_g2z_orca_postprocess.command    # cienki launcher macOS uruchamiający .sh
-
-presets/
-  Zortrax Inventure 0.4 nozzle - dual.orca_printer
-  Zortrax Inventure 0.4 nozzle - single.orca_printer
-
-docs/pl/                              # dokumentacja po polsku
-docs/en/                              # documentation in English
-examples/                             # przykładowe pola G-code i ścieżki post-processingu
+converter/       Konwerter pure Python i launchery Windows/macOS
+orca_presets/    Aktualne presety Orca single/dual
+_docs/           Nie używane — dokumentacja jest w docs/
+docs/            Instalacja, Machine G-code, materiały, troubleshooting
+examples/        Gotowe fragmenty Machine G-code do kopiowania
+source_context/  Skonsolidowane źródła i brief transferowy
+reports/         Raporty self-check / referencyjne, jeśli są dostępne
 ```
 
-### Pipeline
+## Najważniejsza zasada instalacji
 
-1. OrcaSlicer generuje G-code oraz komentarze/metadane.
-2. Orca uruchamia launcher post-processingu.
-3. Launcher uruchamia `scripts/g2z_wrapper_orca.py`.
-4. Konwerter czyta G-code, blok `ORCA METADATA`, fallbacki z komentarzy oraz markery `;ZORTRAX_*`.
-5. Konwerter generuje classic `.zcode`, ustawia pola nagłówka Inventure i przelicza CRC.
-6. Wynikowy `.zcode` trafia do finalnej lokalizacji Save/Save As przekazanej przez Orca albo do lokalizacji podanej przez `--output` przy ręcznym uruchomieniu.
+Zawsze podmieniaj **oba** pliki Python razem:
 
-### Najważniejsze decyzje techniczne v1.01
+```text
+converter/g2z_wrapper_orca.py
+converter/g2z_wrapper_orca_base_lab14_known_good.py
+```
 
-- Aktywny workflow jest **pure Python**: bez Javy i bez `g2z.jar`.
-- Dla plików Orca `.gcode.pp` konwerter wymaga ścieżki wyjściowej z environment Orca; nie używa starego fallbacku `out`.
-- Launchery preferują katalog `~/OrcaScripts` / `%USERPROFILE%\OrcaScripts`, a jeśli nie znajdą tam wrappera, użyją katalogu launchera.
-- `;ZORTRAX_START_PURGE ... LENGTH=...` w v1.01 wykonuje wyłącznie purge o długości `LENGTH`, bez retrakcji. Ekstruder jest przed purge nagrzewany do temperatury materiału z metadanych Orca.
-- W presetach są dwa warianty drukarki: `single` i `dual`, z osobnymi processami, ale wspólną rodziną filamentów.
+Sama podmiana `g2z_wrapper_orca.py` nie wystarczy, bo właściwa mechaniczna konwersja idzie przez plik bazowy.
 
-### Szybka instalacja
+## Szybka instalacja
 
-1. Skopiuj katalog `scripts/` do `OrcaScripts` w katalogu domowym:
-   - Windows: `C:\Users\<użytkownik>\OrcaScripts\`
-   - macOS: `/Users/<użytkownik>/OrcaScripts/`
-2. Zaimportuj w OrcaSlicer odpowiedni preset z katalogu `presets/`:
-   - `Zortrax Inventure 0.4 nozzle - single.orca_printer`
-   - `Zortrax Inventure 0.4 nozzle - dual.orca_printer`
-3. W Orca ustaw post-processing script na pełną ścieżkę do launchera:
-   - Windows: `C:\Users\<użytkownik>\OrcaScripts\run_g2z_orca_postprocess.bat`
-   - macOS: `/Users/<użytkownik>/OrcaScripts/run_g2z_orca_postprocess.command`
-4. Slice / Export plate w Orca. Wynik powinien zostać zapisany jako `.zcode` w lokalizacji Save/Save As.
+Windows:
 
-Szczegóły: [`docs/pl/INSTALLATION.md`](docs/pl/INSTALLATION.md).
+```text
+Skopiuj converter/* do C:\Users\<USER>\OrcaScripts\
+W Orca ustaw post-processing script:
+C:\Users\<USER>\OrcaScripts\run_g2z_orca_postprocess.bat
+```
 
+macOS:
 
-### Ostrzeżenie
+```bash
+mkdir -p ~/OrcaScripts
+cp converter/* ~/OrcaScripts/
+chmod +x ~/OrcaScripts/run_g2z_orca_postprocess.sh
+chmod +x ~/OrcaScripts/run_g2z_orca_postprocess.command
+```
 
-To jest projekt reverse-engineeringowy oparty na ustaleniach testowych. Przed długimi lub kosztownymi wydrukami wykonaj krótki test na prostym modelu i sprawdź homing, nagrzewanie, purge oraz toolchange.
+W Orca ustaw post-processing script:
 
+```text
+/Users/<username>/OrcaScripts/run_g2z_orca_postprocess.command
+```
+
+## Zalecane Machine G-code
+
+Zobacz:
+
+```text
+docs/pl/MACHINE_GCODE_PL.md
+docs/en/MACHINE_GCODE.md
+```
+
+## Najważniejsze zmiany v1.4.16
+
+- Konwerter pure Python G-code → classic `.zcode`.
+- Aktualne presety Orca single/dual.
+- Polityka temperatur `CHAMBER=AUTO`, `T0_TEMP=AUTO`, `T1_TEMP=AUTO`.
+- `E_SPEED_SCALE=AUTO` i `RETRACT_SPEED_SCALE=AUTO` dla technicznych ruchów generowanych przez konwerter.
+- Smart restore w DUAL layer-clean z linii v1.4.15.
+- Bezpieczne single T0 clean i potwierdzone dual T1→T0 clean.
+- Obsługa M83/relative E przez kopię roboczą Orca-like M82.
+- Dokumentacja OP02/process-speed.
+- Clamp `M106 S` do zakresu `0..255`.
+- Opcjonalny marker `;ZORTRAX_LOAD_FILAMENT` do świadomie wywoływanej procedury pre-print/load-like nad koszem.
+
+## Indeks dokumentacji
+
+- English README: [`README.md`](README.md)
+- Instalacja: [`docs/pl/INSTALL_PL.md`](docs/pl/INSTALL_PL.md), [`docs/en/INSTALL.md`](docs/en/INSTALL.md)
+- Release notes: [`docs/pl/RELEASE_NOTES_PL.md`](docs/pl/RELEASE_NOTES_PL.md), [`docs/en/RELEASE_NOTES.md`](docs/en/RELEASE_NOTES.md)
+- Troubleshooting: [`docs/pl/TROUBLESHOOTING_PL.md`](docs/pl/TROUBLESHOOTING_PL.md), [`docs/en/TROUBLESHOOTING.md`](docs/en/TROUBLESHOOTING.md)

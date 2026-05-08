@@ -1,0 +1,10 @@
+orca_field,recommended_accel_mm_s2,status
+Normal printing / fallback,600,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Outer wall,400,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Inner wall,600,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Bridge,300,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Sparse infill,800,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Internal solid infill,700,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+First layer,300,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Top surface,400,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration
+Travel,1000,propozycja robocza — w badanych classic .zcode nie znaleziono jawnej tabeli per-feature acceleration

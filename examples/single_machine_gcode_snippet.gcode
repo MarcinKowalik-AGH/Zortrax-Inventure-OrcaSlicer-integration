@@ -1,0 +1,14 @@
+; SINGLE — Zortrax Inventure / Orca v1.4.16
+; Machine start G-code
+;ZORTRAX_START_MACHINE SINGLE CHAMBER=AUTO T0_TEMP=AUTO E_SPEED_SCALE=AUTO RETRACT_SPEED_SCALE=AUTO
+
+; Tool change / Change filament G-code
+; leave empty
+
+; Layer change G-code
+G92 E0
+;ZORTRAX_LAYER_CLEAN AUTO EVERY=5 START_LAYER=2 SKIP_AFTER_TOOLCHANGE=1 PURGE=AUTO E_SPEED_SCALE=AUTO RETRACT_SPEED_SCALE=AUTO TEMP=AUTO
+;ZORTRAX_LAYER_META layer_num={layer_num} layer_z={layer_z}
+
+; Machine end G-code
+;ZORTRAX_END_MACHINE AUTO

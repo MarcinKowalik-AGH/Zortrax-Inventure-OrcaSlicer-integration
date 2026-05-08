@@ -1,0 +1,15 @@
+file,mode,material,support_material,header_62,byte72,extrusion_temp,chamber_temp,retraction_speed,retraction_distance,Normal printing / fallback F_mm_min,Normal printing / fallback mm_s,Outer wall F_mm_min,Outer wall mm_s,Inner wall F_mm_min,Inner wall mm_s,Bridge F_mm_min,Bridge mm_s,Sparse infill F_mm_min,Sparse infill mm_s,Internal solid infill F_mm_min,Internal solid infill mm_s,First layer F_mm_min,First layer mm_s,Top surface F_mm_min,Top surface mm_s,Travel F_mm_min,Travel mm_s
+asa2.zcode,SINGLE,GLASS-type filament,,0x84,0,225,60,80,2.0,1800,30.0,1500,25.0,1800,30.0,638,10.63,2400,40.0,2000,33.33,2000,33.33,1500,25.0,7200,120.0
+abs.zcode,SINGLE,ASA Pro-based filament,,0x95,0,260,80,73,1.0,1500,25.0,1200,20.0,1500,25.0,2100,35.0,3600,60.0,4800,80.0,2000,33.33,2000,33.33,7200,120.0
+d.zcode,DUAL,PLA-based filament,Z-SUPPORT Premium,0x86,5,210,40,33,1.0,3500,58.33,1200,20.0,3500,58.33,3500,58.33,6500,108.33,6400,106.67,3000,50.0,4000,66.67,7200,120.0
+3.zcode,SINGLE,PETG-based filament,,0x83,7,225,60,80,2.0,1800,30.0,1500,25.0,1800,30.0,638,10.63,2400,40.0,2000,33.33,638,10.63,1500,25.0,7200,120.0
+h.zcode,DUAL,ABS-based filament,Z-SUPPORT Premium,0x81,5,260,80,33,1.0,3500,58.33,1200,20.0,3500,58.33,3500,58.33,6500,108.33,5393,89.88,3500,58.33,4000,66.67,7200,120.0
+f.zcode,DUAL,PETG-based filament,Z-SUPPORT Premium,0x83,5,235,60,80,2.0,3500,58.33,1200,20.0,3500,58.33,3500,58.33,6500,108.33,5334,88.9,3500,58.33,4000,66.67,7200,120.0
+e.zcode,DUAL,GLASS-type filament,Z-SUPPORT Premium,0x84,5,235,60,80,2.0,3500,58.33,1200,20.0,3500,58.33,3500,58.33,6500,108.33,5334,88.9,3500,58.33,4000,66.67,7200,120.0
+b.zcode,SINGLE,PLA-based filament,,0x86,7,210,30,33,1.0,1500,25.0,1200,20.0,1500,25.0,1771,29.52,1500,25.0,2400,40.0,1771,29.52,1200,20.0,7200,120.0
+a.zcode,SINGLE,NYLON-based filament,,0x89,7,250,80,80,2.0,2400,40.0,1395,23.25,2400,40.0,3000,50.0,3000,50.0,2591,43.18,600,10.0,2400,40.0,7200,120.0
+9.zcode,SINGLE,FLEX-based filament,,0x87,7,230,40,35,2.5,1500,25.0,1200,20.0,1500,25.0,1500,25.0,1500,25.0,1800,30.0,721,12.02,2000,33.33,7200,120.0
+7.zcode,SINGLE,PLA Pro-based filament,,0x94,7,207,30,35,1.5,1500,25.0,1200,20.0,1500,25.0,2400,40.0,2400,40.0,2064,34.4,609,10.15,2000,33.33,7200,120.0
+6.zcode,SINGLE,ESD PETG-based filament,,0x92,7,270,60,80,1.8,1500,25.0,1000,16.67,1500,25.0,2400,40.0,2400,40.0,3000,50.0,702,11.7,2000,33.33,7200,120.0
+4.zcode,SINGLE,ULTRAT-based filament,,0x91,7,260,80,73,1.0,1500,25.0,1500,25.0,1500,25.0,2100,35.0,2400,40.0,2840,47.33,512,8.53,2000,33.33,7200,120.0
+raft 4.zcode,DUAL,Z-GLASS,Z-SUPPORT Premium,0x02,4,,,,,3500,58.33,1200,20.0,3500,58.33,3500,58.33,6500,108.33,5334,88.9,3500,58.33,4000,66.67,7200,120.0

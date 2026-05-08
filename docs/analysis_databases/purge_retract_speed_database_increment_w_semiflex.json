@@ -1,0 +1,2962 @@
+{
+  "materials": [
+    {
+      "material": "ESD PETG-based filament",
+      "header_62_codes": "0x92",
+      "header_85_codes": "0x11",
+      "triplets": "01 03 00",
+      "byte72": "5",
+      "extrusion_temps": "270",
+      "support_temps": "220",
+      "chamber_temps": "60",
+      "retract_speed_distance": "80/2.0",
+      "start_profiles": "F480 0xEA E22.520; F3600 0xFE E25.040; DWELL 3000; F3600 0xFD E22.540; RESTORE"
+    },
+    {
+      "material": "PLA Pro-based filament",
+      "header_62_codes": "0x94",
+      "header_85_codes": "0x11",
+      "triplets": "01 03 00",
+      "byte72": "5",
+      "extrusion_temps": "210",
+      "support_temps": "220",
+      "chamber_temps": "40",
+      "retract_speed_distance": "33/1.0",
+      "start_profiles": "F480 0xEA E22.020; F3600 0xFE E24.040; DWELL 3000; F3600 0xFD E22.040; RESTORE"
+    },
+    {
+      "material": "SEMIFLEX-based filament",
+      "header_62_codes": "0x96",
+      "header_85_codes": "0x11",
+      "triplets": "01 03 00",
+      "byte72": "5",
+      "extrusion_temps": "225",
+      "support_temps": "220",
+      "chamber_temps": "50",
+      "retract_speed_distance": "41/2.0",
+      "start_profiles": "F480 0xEA E22.020; F3600 0xFE E24.040; DWELL 3000; F3600 0xFD E22.040; RESTORE"
+    },
+    {
+      "material": "Z-ABS",
+      "header_62_codes": "0x00",
+      "header_85_codes": "0x00",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F2200 0xFE E20.802; F2200 0xFD E20.002; RESTORE"
+    },
+    {
+      "material": "Z-ASA Pro",
+      "header_62_codes": "0x0C",
+      "header_85_codes": "0x0C",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F4400 0xFE E21.000; F4400 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-FLEX",
+      "header_62_codes": "0x0F",
+      "header_85_codes": "0x0F",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F2100 0xFE E22.500; F2100 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-GLASS",
+      "header_62_codes": "0x02",
+      "header_85_codes": "0x02",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F4800 0xFE E22.000; F4800 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-NYLON",
+      "header_62_codes": "0x10",
+      "header_85_codes": "0x10",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F4800 0xFE E22.000; F4800 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-PETG",
+      "header_62_codes": "0x05",
+      "header_85_codes": "0x05",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F4800 0xFE E22.000; F4800 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-PLA",
+      "header_62_codes": "0x0A",
+      "header_85_codes": "0x0A",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F2000 0xFE E21.000; F2000 0xFD E20.000; RESTORE"
+    },
+    {
+      "material": "Z-PLA Pro",
+      "header_62_codes": "0x0B",
+      "header_85_codes": "0x0B",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F2100 0xFE E21.504; F2100 0xFD E20.004; RESTORE"
+    },
+    {
+      "material": "Z-ULTRAT",
+      "header_62_codes": "0x01",
+      "header_85_codes": "0x01",
+      "triplets": "01 02 01",
+      "byte72": "7",
+      "extrusion_temps": "",
+      "support_temps": "",
+      "chamber_temps": "",
+      "retract_speed_distance": "",
+      "start_profiles": "F4800 0xFE E20.000; F4400 0xFE E21.020; F4400 0xFD E20.020; RESTORE"
+    }
+  ],
+  "coverage": [
+    {
+      "class": "native",
+      "material": "Z-ABS",
+      "expected_code": "0x00",
+      "observed_code": "0x00",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-ULTRAT",
+      "expected_code": "0x01",
+      "observed_code": "0x01",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-GLASS",
+      "expected_code": "0x02",
+      "observed_code": "0x02",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-HIPS",
+      "expected_code": "0x03",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PCABS",
+      "expected_code": "0x04",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PETG",
+      "expected_code": "0x05",
+      "observed_code": "0x05",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-ULTRAT PLUS",
+      "expected_code": "0x06",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-SUPPORT",
+      "expected_code": "0x07",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-ESD",
+      "expected_code": "0x08",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PHA",
+      "expected_code": "0x09",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PLA",
+      "expected_code": "0x0A",
+      "observed_code": "0x0A",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PLA PRO",
+      "expected_code": "0x0B",
+      "observed_code": "0x0B",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-ASA PRO",
+      "expected_code": "0x0C",
+      "observed_code": "0x0C",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-SUPPORT PLUS",
+      "expected_code": "0x0D",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-SEMIFLEX",
+      "expected_code": "0x0E",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-FLEX",
+      "expected_code": "0x0F",
+      "observed_code": "0x0F",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-NYLON",
+      "expected_code": "0x10",
+      "observed_code": "0x10",
+      "status": "observed",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-SUPPORT PREMIUM",
+      "expected_code": "0x11",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "native",
+      "material": "Z-PEEK",
+      "expected_code": "0x12",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "ABS-based filament",
+      "expected_code": "0x81",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "PETG-based filament",
+      "expected_code": "0x83",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "GLASS-type filament",
+      "expected_code": "0x84",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "PLA-based filament",
+      "expected_code": "0x86",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "FLEX-based filament",
+      "expected_code": "0x87",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "NYLON-based filament",
+      "expected_code": "0x89",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "ULTRAT-based filament",
+      "expected_code": "0x91",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "ESD PETG-based filament",
+      "expected_code": "0x92",
+      "observed_code": "0x92",
+      "status": "observed",
+      "temps": "270",
+      "chamber": "60",
+      "retract": "80/2.0"
+    },
+    {
+      "class": "external",
+      "material": "PLA Pro-based filament",
+      "expected_code": "0x94",
+      "observed_code": "0x94",
+      "status": "observed",
+      "temps": "210",
+      "chamber": "40",
+      "retract": "33/1.0"
+    },
+    {
+      "class": "external",
+      "material": "ASA Pro-based filament",
+      "expected_code": "0x95",
+      "observed_code": "",
+      "status": "missing full current zcode sample",
+      "temps": "",
+      "chamber": "",
+      "retract": ""
+    },
+    {
+      "class": "external",
+      "material": "SEMIFLEX-based filament",
+      "expected_code": "0x96",
+      "observed_code": "0x96",
+      "status": "observed",
+      "temps": "225",
+      "chamber": "50",
+      "retract": "41/2.0"
+    }
+  ],
+  "toolchanges": {
+    "i.zcode": [
+      {
+        "select_idx": 1255,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1248,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1259,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 1261,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 1262,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1278,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 1279,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1894,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 1887,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1898,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 1900,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 1901,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1917,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 1918,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2540,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 2533,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2544,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 2546,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 2547,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2564,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 2565,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3132,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 3124,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3136,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 3138,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 3139,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3155,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 3156,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3388,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 3381,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3392,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 3395,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 3396,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3412,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 3413,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3951,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 3943,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3955,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 3957,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 3958,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3974,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 3975,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4207,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 4200,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4211,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 4214,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 4215,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4231,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 4232,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4770,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 4762,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4774,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 4776,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 4777,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4793,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 4794,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5026,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 5019,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5030,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 5033,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 5034,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5050,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 5051,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5589,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5581,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5593,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 5595,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 5596,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5612,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 5613,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5845,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 5838,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5849,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.04896
+          },
+          {
+            "idx": 5852,
+            "feed": 4800,
+            "area": "0xFE",
+            "E": 24.09896
+          },
+          {
+            "idx": 5853,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5869,
+            "feed": 4800,
+            "area": "0xFD",
+            "E": 22.09896
+          },
+          {
+            "idx": 5870,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 6408,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 6401,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 6412,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.51979
+          },
+          {
+            "idx": 6414,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 25.03958
+          },
+          {
+            "idx": 6415,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 6431,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.53958
+          },
+          {
+            "idx": 6432,
+            "type": "RESTORE"
+          }
+        ]
+      }
+    ],
+    "k.zcode": [
+      {
+        "select_idx": 1045,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1038,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1049,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 1051,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 1052,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1068,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 1069,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1698,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 1690,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1702,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 1704,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 1705,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1721,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 1722,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1954,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1947,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1958,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 1961,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 1962,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1978,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 1979,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2614,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 2607,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2618,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 2620,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 2621,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2637,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 2638,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2871,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 2863,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2875,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 2877,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 2878,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2894,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 2895,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3431,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 3424,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3435,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 3437,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 3438,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3454,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 3455,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3688,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 3680,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3692,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 3694,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 3695,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3711,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 3712,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4248,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 4241,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4252,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 4254,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 4255,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4271,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 4272,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4505,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 4497,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4509,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 4511,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 4512,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4528,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 4529,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5065,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5058,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5069,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5071,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5072,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5088,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5089,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5322,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 5315,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5326,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 21.0
+          },
+          {
+            "idx": 5328,
+            "feed": 2000,
+            "area": "0xFE",
+            "E": 22.0
+          },
+          {
+            "idx": 5329,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5345,
+            "feed": 2000,
+            "area": "0xFD",
+            "E": 21.0
+          },
+          {
+            "idx": 5346,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5882,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5875,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5886,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5888,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5889,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5905,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5906,
+            "type": "RESTORE"
+          }
+        ]
+      }
+    ],
+    "l.zcode": [
+      {
+        "select_idx": 1047,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1039,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1051,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 1053,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 1054,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1070,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 1071,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1704,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 1697,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1708,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 1710,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 1711,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1727,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 1728,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1961,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1954,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1965,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 1967,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 1968,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1984,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 1985,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2573,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 2566,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2577,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 2580,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 2581,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2597,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 2598,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2830,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 2823,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2834,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 2836,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 2837,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2853,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 2854,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3392,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 3385,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3396,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 3398,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 3399,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3416,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 3417,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3649,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 3642,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3653,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 3655,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 3656,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3672,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 3673,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4211,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 4204,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4215,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 4217,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 4218,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4234,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 4235,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4468,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 4461,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4472,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 4474,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 4475,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4491,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 4492,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5030,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5023,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5034,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5036,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5037,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5053,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5054,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5287,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 5280,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5291,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 5293,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 5294,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5310,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 5311,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5849,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5842,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5853,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5855,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5856,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5872,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5873,
+            "type": "RESTORE"
+          }
+        ]
+      }
+    ],
+    "semiflex.zcode": [
+      {
+        "select_idx": 1047,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1039,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1051,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 1053,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 1054,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1070,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 1071,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1704,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 1697,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1708,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 1710,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 1711,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1727,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 1728,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 1961,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 1954,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 1965,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 1967,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 1968,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 1984,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 1985,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2573,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 2566,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2577,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 2580,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 2581,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2597,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 2598,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 2830,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 2823,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 2834,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 2836,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 2837,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 2853,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 2854,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3392,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 3385,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3396,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 3398,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 3399,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3416,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 3417,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 3649,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 3642,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 3653,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 3655,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 3656,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 3672,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 3673,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4211,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 4204,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4215,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 4217,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 4218,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4234,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 4235,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 4468,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 4461,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 4472,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 4474,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 4475,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 4491,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 4492,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5030,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5023,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5034,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5036,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5037,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5053,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5054,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5287,
+        "tool": 0,
+        "retracts": [
+          {
+            "idx": 5280,
+            "feed": 480,
+            "area": "0xF3",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5291,
+            "feed": 480,
+            "area": "0xF4",
+            "E": 22.0
+          },
+          {
+            "idx": 5293,
+            "feed": 2500,
+            "area": "0xFE",
+            "E": 24.0
+          },
+          {
+            "idx": 5294,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5310,
+            "feed": 2500,
+            "area": "0xFD",
+            "E": 22.0
+          },
+          {
+            "idx": 5311,
+            "type": "RESTORE"
+          }
+        ]
+      },
+      {
+        "select_idx": 5849,
+        "tool": 1,
+        "retracts": [
+          {
+            "idx": 5842,
+            "feed": 480,
+            "area": "0xE9",
+            "E": -20.0,
+            "restore_after": true
+          }
+        ],
+        "positions": [
+          "0x00",
+          "0x09",
+          "0x07",
+          "0x0A",
+          "0x08",
+          "0x09",
+          "0x07",
+          "0x00"
+        ],
+        "body": [
+          {
+            "idx": 5853,
+            "feed": 480,
+            "area": "0xEA",
+            "E": 22.01979
+          },
+          {
+            "idx": 5855,
+            "feed": 3600,
+            "area": "0xFE",
+            "E": 24.03958
+          },
+          {
+            "idx": 5856,
+            "type": "DWELL",
+            "ms": 3000
+          },
+          {
+            "idx": 5872,
+            "feed": 3600,
+            "area": "0xFD",
+            "E": 22.03958
+          },
+          {
+            "idx": 5873,
+            "type": "RESTORE"
+          }
+        ]
+      }
+    ]
+  },
+  "notes": {
+    "semiflex_external_code": "0x96 confirmed in .zcode header for SEMIFLEX-based filament + Z-SUPPORT Premium",
+    "Z_ABS_code": "0x00 observed in native Z-ABS sample from w.zip",
+    "OP0E_OP16": "values match chamber temperature and are not per-feature acceleration",
+    "acceleration": "no explicit per-feature acceleration table detected; use conservative Orca proposals as config, not as Z-Suite decoded truth"
+  }
+}

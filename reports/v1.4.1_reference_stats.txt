@@ -1,0 +1,37 @@
+v1.4.1 package note: legacy v1.4 reference report retained for provenance; converter code has v1.4.1 T0 clean fix.
+tests/single_lab38/zcode/CONE_SUPPORT__V38_01_REFERENCE_CONFIRMED.zcode
+ size: 1027461 sha256: 4b737be14d2d553a7ce9ebce5c2706d37dae1cd2a5021a99fe6c9e464e00dfed
+ header_count: 68404 actual_commands: 68404 byte72: 0 58..60: 01 02 01 crc127: 86
+ op_LAYER_0x10: 404 op_PAUSE_0x0F: 0
+ area 0x00 : 13480
+ area 0x02 : 12176
+ area 0x03 : 7971
+ area 0x05 : 15084
+ area 0x07 : 408
+ area 0x0B RAFT_BOTTOM: 1770
+ area 0x0D RAFT_INTERFACE: 2050
+ area 0x0F : 101
+ area 0x19 : 60
+ area 0xDF SEAM: 406
+ area 0xFB JUMP_PATH: 1838
+ area 0xFD : 1013
+ area 0xFE : 1094
+ area 0xFF : 1125
+tests/dual_lab42b/zcode/cone_dual_ZPLA_ZSUPPORT_raft50_LAB42B_CONFIRMED.zcode
+ size: 826150 sha256: 55aabdad22ebc54953cef18bc30cc79e910bf460fac10b60b6677d146139dedf
+ header_count: 56327 actual_commands: 56327 byte72: 0 58..60: 01 02 01 crc127: 250
+ op_LAYER_0x10: 439 op_PAUSE_0x0F: 0
+ area 0x00 : 13484
+ area 0x02 : 12176
+ area 0x03 : 7975
+ area 0x0B RAFT_BOTTOM: 2120
+ area 0x0D RAFT_INTERFACE: 5395
+ area 0x0F : 107
+ area 0x19 : 60
+ area 0xDF SEAM: 406
+ area 0xEA : 11
+ area 0xF3 : 1
+ area 0xFB JUMP_PATH: 1593
+ area 0xFD : 993
+ area 0xFE : 1069
+ area 0xFF : 1343
