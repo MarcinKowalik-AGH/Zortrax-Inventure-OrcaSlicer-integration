@@ -1,0 +1,45 @@
+{
+  "package": "Zortrax_Inventure_Orca_v1.3-beta3.4_LAB38_RESTORED_1TO1_SINGLE",
+  "version": "v1.3-beta3.4-LAB38-restored-1to1-single-test",
+  "basis": "Zortrax_Inventure_Orca_v1.3-beta3_ALL_CONFIRMED_FINAL wrapper + real LAB38 code patch: raft-zone also when support=true; Python 3.13 sys.modules import fix",
+  "source_gcode": "cone_0.15_Z-PLA_Z-PLA_37m40s sup.gcode",
+  "reference_zcode": "CONE_SUPPORT__V38_01_REFERENCE_CONFIRMED.zcode",
+  "regenerated_zcode": "CONE_SUPPORT__V38_01_REGENERATED_BY_RESTORED_CONVERTER.zcode",
+  "byte_for_byte_equal": true,
+  "reference": {
+    "size": 1027461,
+    "sha256": "4b737be14d2d553a7ce9ebce5c2706d37dae1cd2a5021a99fe6c9e464e00dfed",
+    "command_count_actual": 68404,
+    "header_count_50_53": 68404,
+    "header_58_60_hex": "01 02 01",
+    "byte72": 0,
+    "header_crc_127": 86,
+    "op_LAYER_0x10": 404,
+    "op_PAUSE_0x0F": 0,
+    "area_SEAM_0xDF": 406,
+    "area_RAFT_BOTTOM_0x0B": 1770,
+    "area_RAFT_INTERFACE_0x0D": 2050,
+    "area_JUMP_PATH_0xFB": 1838
+  },
+  "regenerated": {
+    "size": 1027461,
+    "sha256": "4b737be14d2d553a7ce9ebce5c2706d37dae1cd2a5021a99fe6c9e464e00dfed",
+    "command_count_actual": 68404,
+    "header_count_50_53": 68404,
+    "header_58_60_hex": "01 02 01",
+    "byte72": 0,
+    "header_crc_127": 86,
+    "op_LAYER_0x10": 404,
+    "op_PAUSE_0x0F": 0,
+    "area_SEAM_0xDF": 406,
+    "area_RAFT_BOTTOM_0x0B": 1770,
+    "area_RAFT_INTERFACE_0x0D": 2050,
+    "area_JUMP_PATH_0xFB": 1838
+  },
+  "first_diff_offset": null,
+  "notes": [
+    "This is not LAB43/direct and not a reconstructed fast generator.",
+    "The regenerated zcode is byte-for-byte identical to confirmed LAB38 reference.",
+    "The LAB38 fix in the wrapper changes the raft/base-zone condition from support=false-only to raft_layers>0 for layers before model start."
+  ]
+}

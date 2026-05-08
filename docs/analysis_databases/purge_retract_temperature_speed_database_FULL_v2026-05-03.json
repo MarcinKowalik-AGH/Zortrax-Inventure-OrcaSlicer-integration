@@ -1,0 +1,434 @@
+{
+  "ASA PRO-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x95"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "260",
+    "chamber_temp_C": "80",
+    "retraction_speed_mm_min_or_zsuite_setting": "73",
+    "retraction_distance_mm": "1.0",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 4400,
+          "area": "FE",
+          "E": 21.0
+        },
+        {
+          "F": 4400,
+          "area": "FD",
+          "E": 20.0
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "8.zcode",
+      "asa.zcode"
+    ]
+  },
+  "ESD PETG-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x92"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "270",
+    "chamber_temp_C": "60",
+    "retraction_speed_mm_min_or_zsuite_setting": "80",
+    "retraction_distance_mm": "1.8",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 21.804
+        },
+        {
+          "F": 4800,
+          "area": "FD",
+          "E": 20.004
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "5.zcode",
+      "6.zcode"
+    ]
+  },
+  "FLEX-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x87"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "230",
+    "chamber_temp_C": "40",
+    "retraction_speed_mm_min_or_zsuite_setting": "35",
+    "retraction_distance_mm": "2.5",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 2100,
+          "area": "FE",
+          "E": 22.5
+        },
+        {
+          "F": 2100,
+          "area": "FD",
+          "E": 20.0
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "9.zcode"
+    ]
+  },
+  "NYLON-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x89"
+    ],
+    "byte72_values": [
+      4,
+      6,
+      7
+    ],
+    "extrusion_temp_C": "250",
+    "chamber_temp_C": "80",
+    "retraction_speed_mm_min_or_zsuite_setting": "80",
+    "retraction_distance_mm": "2.0",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 22.0
+        },
+        {
+          "F": 4800,
+          "area": "FD",
+          "E": 20.0
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "a.zcode",
+      "single raft 4.zcode",
+      "single raft 6.zcode"
+    ]
+  },
+  "PETG-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x83"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "225",
+    "chamber_temp_C": "60",
+    "retraction_speed_mm_min_or_zsuite_setting": "80",
+    "retraction_distance_mm": "2.0",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 22.0
+        },
+        {
+          "F": 4800,
+          "area": "FD",
+          "E": 20.0
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "3.zcode"
+    ]
+  },
+  "PLA PRO-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x94"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "207",
+    "chamber_temp_C": "30",
+    "retraction_speed_mm_min_or_zsuite_setting": "35",
+    "retraction_distance_mm": "1.5",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 2100,
+          "area": "FE",
+          "E": 21.504
+        },
+        {
+          "F": 2100,
+          "area": "FD",
+          "E": 20.004
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "7.zcode"
+    ]
+  },
+  "PLA-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x86"
+    ],
+    "byte72_values": [
+      7
+    ],
+    "extrusion_temp_C": "210",
+    "chamber_temp_C": "30",
+    "retraction_speed_mm_min_or_zsuite_setting": "33",
+    "retraction_distance_mm": "1.0",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 2000,
+          "area": "FE",
+          "E": 21.0
+        },
+        {
+          "F": 2000,
+          "area": "FD",
+          "E": 20.0
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "b.zcode"
+    ]
+  },
+  "ULTRAT-BASED FILAMENT": {
+    "observed_header_codes": [
+      "0x91"
+    ],
+    "byte72_values": [
+      15,
+      7
+    ],
+    "extrusion_temp_C": "260",
+    "chamber_temp_C": "80",
+    "retraction_speed_mm_min_or_zsuite_setting": "73",
+    "retraction_distance_mm": "1.0",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 4800,
+          "area": "FE",
+          "E": 20.0
+        },
+        {
+          "F": 4400,
+          "area": "FE",
+          "E": 21.02
+        },
+        {
+          "F": 4400,
+          "area": "FD",
+          "E": 20.02
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "4.zcode",
+      "raft 15 single.zcode"
+    ]
+  },
+  "Z-GLASS": {
+    "observed_header_codes": [
+      "0x02"
+    ],
+    "byte72_values": [
+      0,
+      15,
+      4,
+      8
+    ],
+    "extrusion_temp_C": "",
+    "chamber_temp_C": "",
+    "retraction_speed_mm_min_or_zsuite_setting": "",
+    "retraction_distance_mm": "",
+    "start_machine_single_T0": {
+      "moves": [
+        {
+          "F": 480,
+          "area": "EA",
+          "E": 22.52
+        },
+        {
+          "F": 3600,
+          "area": "FE",
+          "E": 25.04
+        },
+        {
+          "F": 3600,
+          "area": "FD",
+          "E": 22.54
+        }
+      ],
+      "restore_E0": true
+    },
+    "source_files": [
+      "raft 30.zcode",
+      "raft 4.zcode",
+      "raft 50.zcode",
+      "raft 8.zcode",
+      "raft disable  brim 9 lift 40.zcode",
+      "raft disable brim 5.zcode"
+    ]
+  },
+  "_CONFIRMED_DUAL_TOOLCHANGE_CLEAN": {
+    "T1_to_T0": {
+      "old_retract": {
+        "F": 480,
+        "area": "F3",
+        "E": -20.0,
+        "restore_E0_after_retract": true
+      },
+      "select": "T0",
+      "pos": "00",
+      "moves": [
+        {
+          "F": 480,
+          "area": "F4",
+          "E": 21.0
+        },
+        {
+          "F": 2000,
+          "area": "FE",
+          "E": 22.0
+        },
+        {
+          "DWELL_ms": 3000
+        },
+        {
+          "path": [
+            "0A",
+            "08",
+            "09",
+            "07",
+            "0A",
+            "08",
+            "00"
+          ]
+        },
+        {
+          "F": 2000,
+          "area": "FD",
+          "E": 21.0
+        }
+      ],
+      "restore_E0": true,
+      "physical_status": "confirmed by print test: no long wait / no filament-load procedure"
+    },
+    "T0_to_T1": {
+      "old_retract": {
+        "F": 480,
+        "area": "E9",
+        "E": -20.0,
+        "restore_E0_after_retract": true
+      },
+      "select": "T1",
+      "pos": "00",
+      "moves": [
+        {
+          "F": 480,
+          "area": "EA",
+          "E": 22.02
+        },
+        {
+          "F": 3600,
+          "area": "FE",
+          "E": 24.04
+        },
+        {
+          "DWELL_ms": 3000
+        },
+        {
+          "path": [
+            "09",
+            "07",
+            "0A",
+            "08",
+            "09",
+            "07",
+            "00"
+          ]
+        },
+        {
+          "F": 3600,
+          "area": "FD",
+          "E": 22.04
+        }
+      ],
+      "restore_E0": true
+    }
+  },
+  "_RAFT_RULES": {
+    "brim_area": "0x22 on layer 0 only when raft disabled",
+    "raft_enabled": "disable area 0x22, use negative layers",
+    "effective_raft": "byte72/effective = min(requested,15) for observed 4/6/8/15/30/50",
+    "negative_layers": "-(effective+1)..-1",
+    "single_area_sequence": "0A x2, 0B x1, 0C x1 when effective=4; 0C x2 when effective>=6 observed; rest 0D",
+    "dual_area_sequence": "0A x2, 0B x1, 0C x1, rest 0D in observed dual raft 4/8/15+",
+    "raft_E_per_mm_approx": {
+      "0A": "~0.46875",
+      "0B": "~0.095-0.109",
+      "0C": "~0.075-0.078",
+      "0D": "~0.0469"
+    }
+  }
+}

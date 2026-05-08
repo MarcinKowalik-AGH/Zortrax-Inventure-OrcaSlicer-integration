@@ -1,126 +1,87 @@
-# Zortrax Inventure + OrcaSlicer integration / Integracja Zortrax Inventure z OrcaSlicer
+# Zortrax Inventure + OrcaSlicer integration
 
-## Polski
+**Current GitHub export:** `v1.4.16`  
+**Converter:** `v1.4.16-production-load-filament-marker-2026-05-06`  
+**Base converter:** `v1.4.16-base-LAB38-safe-load-filament-marker-2026-05-06`  
+**Orca presets:** `v1.4.14_current_converter`  
+**Export date:** `2026-05-08`
 
-Projekt zawiera konfiguracje OrcaSlicer oraz konwerter post-processingu umożliwiający przygotowanie plików `.zcode` dla drukarki **Zortrax Inventure** bez używania Z-Suite jako slicera.
+This project enables generating classic `.zcode` files for **Zortrax Inventure** directly from **OrcaSlicer** with a pure-Python post-processing converter. It is intended to reproduce the most important Z-Suite behavior: `.zcode` header fields, material IDs, single/dual jobs, support handling, start routines, bin purge/clean, toolchange cleaning, raft/seam/tower semantics and selected firmware-facing metadata.
 
-Aktualna paczka: **v1.01**.
+> This is a reverse-engineering project. Use short test prints first and do not treat experimental material entries as fully validated.
 
-### Co zawiera repozytorium
-
-```text
-scripts/
-  g2z_wrapper_orca.py                 # główny konwerter G-code -> classic .zcode
-  run_g2z_orca_postprocess.bat        # launcher Windows dla Orca post-processing
-  run_g2z_orca_postprocess.sh         # launcher macOS/Linux
-  run_g2z_orca_postprocess.command    # cienki launcher macOS uruchamiający .sh
-
-presets/
-  Zortrax Inventure 0.4 nozzle - dual.orca_printer
-  Zortrax Inventure 0.4 nozzle - single.orca_printer
-
-docs/pl/                              # dokumentacja po polsku
-docs/en/                              # documentation in English
-examples/                             # przykładowe pola G-code i ścieżki post-processingu
-```
-
-### Pipeline
-
-1. OrcaSlicer generuje G-code oraz komentarze/metadane.
-2. Orca uruchamia launcher post-processingu.
-3. Launcher uruchamia `scripts/g2z_wrapper_orca.py`.
-4. Konwerter czyta G-code, blok `ORCA METADATA`, fallbacki z komentarzy oraz markery `;ZORTRAX_*`.
-5. Konwerter generuje classic `.zcode`, ustawia pola nagłówka Inventure i przelicza CRC.
-6. Wynikowy `.zcode` trafia do finalnej lokalizacji Save/Save As przekazanej przez Orca albo do lokalizacji podanej przez `--output` przy ręcznym uruchomieniu.
-
-### Najważniejsze decyzje techniczne v1.01
-
-- Aktywny workflow jest **pure Python**: bez Javy i bez `g2z.jar`.
-- Dla plików Orca `.gcode.pp` konwerter wymaga ścieżki wyjściowej z environment Orca; nie używa starego fallbacku `out`.
-- Launchery preferują katalog `~/OrcaScripts` / `%USERPROFILE%\OrcaScripts`, a jeśli nie znajdą tam wrappera, użyją katalogu launchera.
-- `;ZORTRAX_START_PURGE ... LENGTH=...` w v1.01 wykonuje wyłącznie purge o długości `LENGTH`, bez retrakcji. Ekstruder jest przed purge nagrzewany do temperatury materiału z metadanych Orca.
-- W presetach są dwa warianty drukarki: `single` i `dual`, z osobnymi processami, ale wspólną rodziną filamentów.
-
-### Szybka instalacja
-
-1. Skopiuj katalog `scripts/` do `OrcaScripts` w katalogu domowym:
-   - Windows: `C:\Users\<użytkownik>\OrcaScripts\`
-   - macOS: `/Users/<użytkownik>/OrcaScripts/`
-2. Zaimportuj w OrcaSlicer odpowiedni preset z katalogu `presets/`:
-   - `Zortrax Inventure 0.4 nozzle - single.orca_printer`
-   - `Zortrax Inventure 0.4 nozzle - dual.orca_printer`
-3. W Orca ustaw post-processing script na pełną ścieżkę do launchera:
-   - Windows: `C:\Users\<użytkownik>\OrcaScripts\run_g2z_orca_postprocess.bat`
-   - macOS: `/Users/<użytkownik>/OrcaScripts/run_g2z_orca_postprocess.command`
-4. Slice / Export plate w Orca. Wynik powinien zostać zapisany jako `.zcode` w lokalizacji Save/Save As.
-
-Szczegóły: [`docs/pl/INSTALLATION.md`](docs/pl/INSTALLATION.md).
-
-
-
-### Ostrzeżenie
-
-To jest projekt reverse-engineeringowy oparty na ustaleniach testowych. Przed długimi lub kosztownymi wydrukami wykonaj krótki test na prostym modelu i sprawdź homing, nagrzewanie, purge oraz toolchange.
-
----
-
-## English
-
-This project provides OrcaSlicer profiles and a post-processing converter for producing `.zcode` files for the **Zortrax Inventure** printer without using Z-Suite as the slicer.
-
-Current package: **v1.01**.
-
-### Repository contents
+## What is included
 
 ```text
-scripts/
-  g2z_wrapper_orca.py                 # main G-code -> classic .zcode converter
-  run_g2z_orca_postprocess.bat        # Windows launcher for Orca post-processing
-  run_g2z_orca_postprocess.sh         # macOS/Linux launcher
-  run_g2z_orca_postprocess.command    # thin macOS launcher calling the .sh script
-
-presets/
-  Zortrax Inventure 0.4 nozzle - dual.orca_printer
-  Zortrax Inventure 0.4 nozzle - single.orca_printer
-
-docs/pl/                              # Polish documentation
-docs/en/                              # English documentation
-examples/                             # example Machine G-code and post-processing paths
+converter/       Pure-Python converter and Windows/macOS launchers
+orca_presets/    Current Orca printer/process/filament preset bundles
+docs/            Installation, Machine G-code, materials and troubleshooting notes
+examples/        Ready-to-copy Machine G-code snippets
+source_context/  Consolidated project source/transfer notes
+reports/         Self-check/reference reports where available
 ```
 
-### Pipeline
+## Important installation rule
 
-1. OrcaSlicer generates G-code and metadata/comments.
-2. Orca runs the post-processing launcher.
-3. The launcher starts `scripts/g2z_wrapper_orca.py`.
-4. The converter reads the G-code, the `ORCA METADATA` block, comment fallbacks, and `;ZORTRAX_*` markers.
-5. The converter generates classic `.zcode`, fills the Inventure header fields, and recalculates the header CRC.
-6. The resulting `.zcode` is saved to the final Save/Save As location provided by Orca, or to the path passed through `--output` when run manually.
+Always replace **both** Python files together:
 
-### Key technical decisions in v1.01
+```text
+converter/g2z_wrapper_orca.py
+converter/g2z_wrapper_orca_base_lab14_known_good.py
+```
 
-- The active workflow is **pure Python**: no Java and no `g2z.jar`.
-- For Orca `.gcode.pp` files, the converter requires Orca's output path from the environment; it does not use the old `out` fallback directory.
-- Launchers prefer `~/OrcaScripts` / `%USERPROFILE%\OrcaScripts`; if the wrapper is not found there, they use the launcher directory.
-- In v1.01, `;ZORTRAX_START_PURGE ... LENGTH=...` performs purge only, using the `LENGTH` value, with no retract. The extruder is heated to the material temperature from Orca metadata before the purge.
-- The profiles include two printer variants: `single` and `dual`, with separate process profiles and a shared filament family.
+Replacing only `g2z_wrapper_orca.py` is not enough, because the wrapper delegates the mechanical conversion to the base file.
 
-### Quick installation
+## Quick installation
 
-1. Copy the `scripts/` directory to `OrcaScripts` in your home directory:
-   - Windows: `C:\Users\<user>\OrcaScripts\`
-   - macOS: `/Users/<user>/OrcaScripts/`
-2. Import the required OrcaSlicer profile from `presets/`:
-   - `Zortrax Inventure 0.4 nozzle - single.orca_printer`
-   - `Zortrax Inventure 0.4 nozzle - dual.orca_printer`
-3. Set Orca's post-processing script to the full launcher path:
-   - Windows: `C:\Users\<user>\OrcaScripts\run_g2z_orca_postprocess.bat`
-   - macOS: `/Users/<user>/OrcaScripts/run_g2z_orca_postprocess.command`
-4. Slice / Export plate from Orca. The result should be saved as `.zcode` in the selected Save/Save As location.
+Windows:
 
-Details: [`docs/en/INSTALLATION.md`](docs/en/INSTALLATION.md).
+```text
+Copy converter/* to C:\Users\<USER>\OrcaScripts\
+Set Orca post-processing script to:
+C:\Users\<USER>\OrcaScripts\run_g2z_orca_postprocess.bat
+```
 
+macOS:
 
-### Warning
+```bash
+mkdir -p ~/OrcaScripts
+cp converter/* ~/OrcaScripts/
+chmod +x ~/OrcaScripts/run_g2z_orca_postprocess.sh
+chmod +x ~/OrcaScripts/run_g2z_orca_postprocess.command
+```
 
-This is a reverse-engineering project based on practical tests. Before long or expensive prints, run a short test with a simple model and verify homing, heating, purge, and toolchange behavior.
+Set Orca post-processing script to:
+
+```text
+/Users/<username>/OrcaScripts/run_g2z_orca_postprocess.command
+```
+
+## Recommended Machine G-code
+
+See:
+
+```text
+docs/en/MACHINE_GCODE.md
+docs/pl/MACHINE_GCODE_PL.md
+```
+
+## Key features in v1.4.16
+
+- Pure-Python G-code → classic `.zcode` conversion.
+- Current Orca single/dual presets.
+- `CHAMBER=AUTO`, `T0_TEMP=AUTO`, `T1_TEMP=AUTO` temperature policy.
+- `E_SPEED_SCALE=AUTO` and `RETRACT_SPEED_SCALE=AUTO` for converter-generated technical moves.
+- Smart DUAL layer-clean restore inherited from v1.4.15.
+- Safe single T0 clean and confirmed dual T1→T0 clean behavior.
+- M83/relative E handling through Orca-like M82 conversion.
+- OP02/process-speed documentation.
+- M106 fan clamp to `0..255`.
+- Optional `;ZORTRAX_LOAD_FILAMENT` marker for a deliberate pre-print/load-like routine above the bin.
+
+## Documentation index
+
+- Polish README: [`README_PL.md`](README_PL.md)
+- Installation: [`docs/en/INSTALL.md`](docs/en/INSTALL.md), [`docs/pl/INSTALL_PL.md`](docs/pl/INSTALL_PL.md)
+- Release notes: [`docs/en/RELEASE_NOTES.md`](docs/en/RELEASE_NOTES.md), [`docs/pl/RELEASE_NOTES_PL.md`](docs/pl/RELEASE_NOTES_PL.md)
+- Troubleshooting: [`docs/en/TROUBLESHOOTING.md`](docs/en/TROUBLESHOOTING.md), [`docs/pl/TROUBLESHOOTING_PL.md`](docs/pl/TROUBLESHOOTING_PL.md)

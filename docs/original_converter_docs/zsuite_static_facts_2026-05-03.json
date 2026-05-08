@@ -1,0 +1,68 @@
+{
+  "source": "Z-Suite.zip static offline analysis",
+  "executed_zsuite": false,
+  "safe_to_use_now": {
+    "ui_printer_model_ids": {
+      "M200": 0,
+      "Inventure": 1,
+      "M350": 2,
+      "M300PL": 3,
+      "M300CN": 4,
+      "M200Plus": 5,
+      "M300Plus": 6,
+      "Inkspire": 7,
+      "M300Dual": 8,
+      "Apoller": 9,
+      "Endureal": 11,
+      "Inkspire2": 12,
+      "CustomResin": 250
+    },
+    "classic_config_keys": [
+      "ES_RetractionBeforeChangeToModel",
+      "ES_RetractionBeforeChangeToModelSpeed",
+      "ES_RetractionBeforeChangeToSupport",
+      "ES_RetractionBeforeChangeToSupportSpeed",
+      "ES_PurgeAfterChangeToModel",
+      "ES_PurgeAfterChangeToModelSpeed",
+      "ES_PurgeAfterChangeToSupport",
+      "ES_PurgeAfterChangeToSupportSpeed",
+      "ES_SleepTimeBeforeBrusning",
+      "ES_BrushingTimes",
+      "ES_ExtruderSwitchInFirmware",
+      "ES_WasteTowerEnable",
+      "ES_WasteTowerSizeX",
+      "ES_WasteTowerSizeY",
+      "ES_WasteTowerCenterX",
+      "ES_WasteTowerCenterY",
+      "ES_WasteTowerOffset",
+      "ES_WasteTowerSpeedModel",
+      "ES_WasteTowerSpeedSupport",
+      "ES_WasteTowerFeedModel",
+      "ES_WasteTowerFeedSupport",
+      "InventureBackFanSpeed",
+      "SupportTempExtruder",
+      "LowTempSupport",
+      "WarmingTimeFromLowTempSupport",
+      "WarmingMarginTimeFromLowTempSupport",
+      "StartGCode",
+      "EndGCode",
+      "EnableRaft",
+      "EnableSupport"
+    ]
+  },
+  "important_separation": {
+    "zsuite_ui_printer_model_id_inventure": 1,
+    "confirmed_classic_zcode_header_61_inventure_in_current_converter": "0x0A",
+    "rule": "Do not replace header[61] with the UI enum value without a separate printer/Z-Suite test."
+  },
+  "added_to_v1_4_3": [
+    "ZSUITE_UI_PRINTER_MODEL_IDS diagnostic constant",
+    "ZSUITE_CLASSIC_CONFIG_KEYS diagnostic alias table",
+    "log-only audit for single jobs: warns if area F4 or DWELL 3000 appears, because those indicate dual T0 clean/load-like context"
+  ],
+  "not_found_as_clear_static_data": [
+    "complete classic .zcode opcode table",
+    "direct classic Inventure command generator tables",
+    "safe byte-level preview/hotbed algorithm for opcode 0x12"
+  ]
+}

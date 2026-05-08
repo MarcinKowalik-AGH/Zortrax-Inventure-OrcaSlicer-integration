@@ -1,0 +1,17 @@
+area,recommended_orca_field,semantics,global_dominant_F_mm_min,global_mm_s_rounded,global_moves,single_dominant_F_mm_min,single_mm_s_rounded,single_moves,dual_dominant_F_mm_min,dual_mm_s_rounded,dual_moves
+0x00,outer_wall_speed,model/global print speed scaled,1200,20,677588,1200,20,124796,1200,20,552792
+0x02,inner_wall_speed,model/global print speed scaled,3500,58,204926,1500,25,115687,3500,58,204926
+0x03,internal_solid_infill_speed,model/global print speed scaled,6400,107,147959,2400,40,62315,6400,107,147959
+0x04,support_speed,support print speed controlled: global print speed x support speed,3500,58,628632,2400,40,126358,3500,58,628632
+0x05,support_speed,support print speed controlled: global print speed x support speed,3500,58,251577,2400,40,60195,3500,58,251577
+0x06,support_related_global_speed,"support-related, but b3 shows global print speed only",3500,58,301299,2100,35,24363,3500,58,301299
+0x07,support_related_global_speed,"support-related, but b3 shows global print speed only",3500,58,116097,2100,35,24486,3500,58,116097
+0x09,support_related_global_speed,"support-related, but b3 shows global print speed only",3500,58,55697,1500,25,3390,3500,58,55697
+0x11,top_surface_speed,model/global print speed scaled,4000,67,53836,2000,33,12177,4000,67,53836
+0x13,sparse_infill_speed,model/global print speed scaled,6500,108,201138,1500,25,100601,6500,108,201138
+0x18,support_speed,support print speed controlled: global print speed x support speed,3500,58,3989,2400,40,1273,3500,58,3989
+0x1B,support_interface_speed,"support surface/interface-like; global print speed scaled, not support speed slider",1800,30,178320,2100,35,46055,1800,30,136967
+0x1D,wipe_tower_max_purge_speed,printed tower model; not scaled by print speed slider,2000,33,63556,2000,33,5016,2000,33,58540
+0x1E,wipe_tower_max_purge_speed,printed tower support; not scaled by print speed slider,2000,33,49178,,,0,2000,33,49178
+0x21,support_interface_speed_or_surface,"support surface/interface-like; global print speed scaled, not support speed slider",1800,30,28550,2100,35,2659,1800,30,25906
+0xFC,travel_speed,travel; not scaled by print speed slider,7200,120,859473,7200,120,154901,7200,120,704572
