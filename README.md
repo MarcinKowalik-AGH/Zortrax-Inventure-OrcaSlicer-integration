@@ -1,6 +1,6 @@
 # Zortrax Inventure + OrcaSlicer integration
 
-**Current GitHub export:** `v1.4.16`  
+**Current GitHub export:** `v1.4.17`  
 **Converter:** `v1.4.16-production-load-filament-marker-2026-05-06`  
 **Base converter:** `v1.4.16-base-LAB38-safe-load-filament-marker-2026-05-06`  
 **Orca presets:** `v1.4.14_current_converter`  
@@ -85,3 +85,20 @@ docs/pl/MACHINE_GCODE_PL.md
 - Installation: [`docs/en/INSTALL.md`](docs/en/INSTALL.md), [`docs/pl/INSTALL_PL.md`](docs/pl/INSTALL_PL.md)
 - Release notes: [`docs/en/RELEASE_NOTES.md`](docs/en/RELEASE_NOTES.md), [`docs/pl/RELEASE_NOTES_PL.md`](docs/pl/RELEASE_NOTES_PL.md)
 - Troubleshooting: [`docs/en/TROUBLESHOOTING.md`](docs/en/TROUBLESHOOTING.md), [`docs/pl/TROUBLESHOOTING_PL.md`](docs/pl/TROUBLESHOOTING_PL.md)
+
+
+## Author and license
+
+**Author / maintainer:** Marcin Kowalik  
+**E-mail:** mkowalik@agh.edu.pl
+
+Original integration code, project-specific configuration and documentation
+authored for this repository are distributed under the MIT license. Third-party
+project names, trademarks, proprietary software and interoperability references
+remain the property of their respective rights holders.
+
+See [`LICENSE`](LICENSE), [`AUTHORS.md`](AUTHORS.md), and
+[`THIRD_PARTY_NOTICE.md`](THIRD_PARTY_NOTICE.md).
+
+This project is independent and is not affiliated with or endorsed by Zortrax
+or the OrcaSlicer project.
