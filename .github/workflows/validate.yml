@@ -1,0 +1,27 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python syntax
+        run: |
+          python3 -m py_compile             converter/g2z_wrapper_orca.py             converter/g2z_wrapper_orca_base_lab14_known_good.py             scripts/g2z_wrapper_orca.py             tools/lab42_insert_initial_progress_reference.py             tools/reproduce_lab38_single.py             tools/zcode_stats.py
+      - name: Shell syntax
+        run: |
+          bash -n converter/run_g2z_orca_postprocess.sh
+          bash -n converter/run_g2z_orca_postprocess.command
+          bash -n scripts/run_g2z_orca_postprocess.sh
+          bash -n scripts/run_g2z_orca_postprocess.command
+          bash -n build/build_pyinstaller_macos_linux.sh
+      - name: Metadata consistency
+        run: |
+          test "$(tr -d '\n' < VERSION)" = "v1.4.17"
+          grep -q '^version: 1.4.17$' CITATION.cff
+          grep -q 'Marcin Kowalik' AUTHORS.md
+          grep -q 'mkowalik@agh.edu.pl' AUTHORS.md
