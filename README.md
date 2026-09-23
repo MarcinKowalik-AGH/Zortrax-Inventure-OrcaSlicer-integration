@@ -4,7 +4,7 @@
 **Converter:** `v1.4.16-production-load-filament-marker-2026-05-06`  
 **Base converter:** `v1.4.16-base-LAB38-safe-load-filament-marker-2026-05-06`  
 **Orca presets:** `v1.4.14_current_converter`  
-**Export date:** `2026-05-08`
+**Repository release date:** `2026-09-23`
 
 This project enables generating classic `.zcode` files for **Zortrax Inventure** directly from **OrcaSlicer** with a pure-Python post-processing converter. It is intended to reproduce the most important Z-Suite behavior: `.zcode` header fields, material IDs, single/dual jobs, support handling, start routines, bin purge/clean, toolchange cleaning, raft/seam/tower semantics and selected firmware-facing metadata.
 
