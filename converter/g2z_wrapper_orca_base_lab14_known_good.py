@@ -1,5 +1,10 @@
 
 #!/usr/bin/env python3
+# Author: Marcin Kowalik <mkowalik@agh.edu.pl>
+# Copyright (c) 2026 Marcin Kowalik
+# SPDX-License-Identifier: MIT
+# Independent interoperability / reverse-engineering project.
+
 from __future__ import annotations
 
 import argparse
