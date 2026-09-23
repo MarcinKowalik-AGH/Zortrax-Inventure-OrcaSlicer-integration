@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+# Author: Marcin Kowalik <mkowalik@agh.edu.pl>
+# Copyright (c) 2026 Marcin Kowalik
+# SPDX-License-Identifier: MIT
+# Independent interoperability / reverse-engineering project.
+
 from __future__ import annotations
 
 # Zortrax Inventure / Orca v1.4.16-load-filament-marker-2026-05-06 wrapper
