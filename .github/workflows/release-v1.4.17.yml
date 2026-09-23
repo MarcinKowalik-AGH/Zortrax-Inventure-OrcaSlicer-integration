@@ -1,0 +1,44 @@
+name: Publish v1.4.17
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/release-v1.4.17.yml
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure release identity
+        run: |
+          git config user.name "Marcin Kowalik"
+          git config user.email "mkowalik@agh.edu.pl"
+
+      - name: Create and push v1.4.17 tag
+        run: |
+          if git rev-parse "v1.4.17" >/dev/null 2>&1; then
+            echo "Tag v1.4.17 already exists."
+          else
+            git tag -a "v1.4.17" -m "Zortrax Inventure + OrcaSlicer integration v1.4.17"
+            git push origin "v1.4.17"
+          fi
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "v1.4.17" >/dev/null 2>&1; then
+            echo "Release v1.4.17 already exists."
+          else
+            gh release create "v1.4.17"               --title "Zortrax Inventure + OrcaSlicer integration v1.4.17"               --notes-file RELEASE_NOTES_v1.4.17.md
+          fi
