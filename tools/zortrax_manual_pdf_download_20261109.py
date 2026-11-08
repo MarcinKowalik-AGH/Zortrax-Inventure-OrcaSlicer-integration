@@ -60,7 +60,8 @@ def fetch(task):
     return model,None,{"file":name,"source":url,"reason":last}
 report={k:{"model":k,"downloaded":[],"failed":[],"additional_official_guides":SUPPORT_LINKS[k]} for k in DOCS}
 with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
-    for model,ok,error in concurrent.futures.as_completed([pool.submit(fetch,t) for t in TASKS]):
+    for future in concurrent.futures.as_completed([pool.submit(fetch,t) for t in TASKS]):
+        model,ok,error=future.result()
         if ok: report[model]["downloaded"].append(ok)
         if error:report[model]["failed"].append(error)
 for model,item in report.items():
