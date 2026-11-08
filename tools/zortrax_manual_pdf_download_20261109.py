@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Collect independently downloadable Zortrax manuals and official support PDFs."""
 import concurrent.futures
+import gzip
 import hashlib
 import json
 import time
@@ -26,6 +27,7 @@ DOCS = {
         ("Serwis_M300_Dual_Konserwacja_EN.pdf",f"{BASE}/pdf/create/steps.php?id=27014","PDF z bazy wiedzy producenta"),
     ],
     "Inventure": [
+        ("Inventure_Konserwacja_JDM3D_EN.pdf","https://jdm3d.pl/wp-content/uploads/2020/02/ZORTRAX_Support_Center_inventure-maintenance-guide.pdf","Kopia PDF instrukcji serwisowej producenta w JDM3D"),
         ("Instrukcja_Inventure_PL_2020.pdf",f"{BASE}/wp-content/uploads/2020/11/instrukcja_obslugi_inventure_14102020.pdf","podrecznik producenta"),
         ("Instrukcja_Inventure_EN_2020.pdf",f"{BASE}/wp-content/uploads/2020/11/user_guide_zortrax_inventure_14102020.pdf","podrecznik producenta"),
         ("Instrukcja_Inventure_EN_2021.pdf",f"{BASE}/wp-content/uploads/2022/01/user_guide_zortrax_inventure_2021.03.12.pdf","podrecznik producenta"),
@@ -57,6 +59,8 @@ def fetch(task):
             request=urllib.request.Request(candidate,headers=HEADERS)
             with urllib.request.urlopen(request,timeout=38) as r:
                 payload=r.read(35_000_000)
+            if payload.startswith(b"\x1f\x8b"):
+                payload=gzip.decompress(payload)
             if not payload.startswith(b"%PDF-") or len(payload)<18000:
                 raise ValueError(f"Expected PDF, got {len(payload)} bytes and {payload[:24]!r}")
             target=ROOT/model/name
@@ -67,9 +71,10 @@ def fetch(task):
         except Exception as error:
             last=f"{type(error).__name__}: {error}"
             print("FAILED",model,name,candidate,last,flush=True)
+            time.sleep(1.5)
     return model,None,{"file":name,"source":url,"reason":last}
 report={k:{"model":k,"downloaded":[],"failed":[],"additional_official_guides":SUPPORT_LINKS[k]} for k in DOCS}
-with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
     for future in concurrent.futures.as_completed([pool.submit(fetch,t) for t in TASKS]):
         model,ok,error=future.result()
         if ok: report[model]["downloaded"].append(ok)
