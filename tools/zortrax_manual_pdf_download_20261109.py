@@ -20,6 +20,9 @@ DOCS = {
         ("Instrukcja_M300_Dual_PL_2025.pdf",f"{BASE}/wp-content/uploads/2025/08/instrukcja_obslugi_zortrax_m300_dual_01082025.pdf","podrecznik producenta"),
         ("Instrukcja_M300_Dual_EN_2025.pdf",f"{BASE}/wp-content/uploads/2025/08/user_guide_zortrax_m300_dual_01082025.pdf","podrecznik producenta"),
         ("Instrukcja_M300_Dual_PL_2020.pdf",f"{BASE}/wp-content/uploads/2020/11/instrukcja_obslugi_zortrax_m300_dual_14102020.pdf","podrecznik producenta"),
+        ("M300_Dual_Instrukcja_PL_Botland_2019.pdf","https://botland.com.pl/index.php?controller=attachment&id_attachment=3258","Instrukcja producenta z archiwum sklepu Botland"),
+        ("M300_Dual_Specyfikacja_Botland.pdf","https://botland.com.pl/index.php?controller=attachment&id_attachment=3257","Karta produktu z archiwum sklepu Botland"),
+        ("M300_Dual_Opis_Botland.pdf","https://botland.com.pl/index.php?controller=attachment&id_attachment=3256","Opis produktu z archiwum sklepu Botland"),
         ("Serwis_M300_Dual_Konserwacja_EN.pdf",f"{BASE}/pdf/create/steps.php?id=27014","PDF z bazy wiedzy producenta"),
     ],
     "Inventure": [
@@ -41,22 +44,29 @@ TASKS=[(model,*item) for model,items in DOCS.items() for item in items]
 HEADERS={"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15", "Accept":"application/pdf,application/octet-stream;q=0.9,*/*;q=0.5"}
 def fetch(task):
     model,name,url,kind=task
-    for attempt in range(2):
+    if url.startswith(BASE):
+        alternatives=[
+            f"https://web.archive.org/web/20261108000000id_/{url}",
+            f"https://web.archive.org/web/20230101000000id_/{url}",
+        ]
+    else:
+        alternatives=[url]
+    last="not attempted"
+    for candidate in alternatives:
         try:
-            request=urllib.request.Request(url,headers=HEADERS)
-            with urllib.request.urlopen(request,timeout=28) as r:
+            request=urllib.request.Request(candidate,headers=HEADERS)
+            with urllib.request.urlopen(request,timeout=38) as r:
                 payload=r.read(35_000_000)
             if not payload.startswith(b"%PDF-") or len(payload)<18000:
                 raise ValueError(f"Expected PDF, got {len(payload)} bytes and {payload[:24]!r}")
             target=ROOT/model/name
             target.write_bytes(payload)
-            result={"file":name,"source":url,"type":kind,"size":len(payload),"sha256":hashlib.sha256(payload).hexdigest()}
-            print("OK",model,name,len(payload),flush=True)
+            result={"file":name,"source":candidate,"original_url":url,"type":kind,"size":len(payload),"sha256":hashlib.sha256(payload).hexdigest()}
+            print("OK",model,name,len(payload),"FROM",candidate,flush=True)
             return model,result,None
         except Exception as error:
             last=f"{type(error).__name__}: {error}"
-            print("FAILED ATTEMPT",model,name,last,flush=True)
-            time.sleep(.4)
+            print("FAILED",model,name,candidate,last,flush=True)
     return model,None,{"file":name,"source":url,"reason":last}
 report={k:{"model":k,"downloaded":[],"failed":[],"additional_official_guides":SUPPORT_LINKS[k]} for k in DOCS}
 with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
