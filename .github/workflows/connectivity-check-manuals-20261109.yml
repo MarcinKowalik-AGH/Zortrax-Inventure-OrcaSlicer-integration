@@ -1,0 +1,37 @@
+name: Connectivity check for documentation mirrors
+on:
+  push:
+    branches:
+      - docs-zortrax-manuals-20261109
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Test documentation mirrors (no file modifications)
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,subprocess
+          urls=[
+            "https://www.google.com/",
+            "https://github.com/",
+            "https://raw.githubusercontent.com/",
+            "https://support.zortrax.com/wp-content/uploads/2025/08/user_guide_zortrax_m300_dual_01082025.pdf",
+            "https://device.report/m/1b7790c5385364d5268c75db99251f217dc81bccdb0d3bbfa0d66ffdc8b84c0e",
+            "https://device.report/m/7e401a9c48207b6ea204d517603dfb693558176d417399a2836e0e49ad7c386c",
+            "https://manuall.pl/zortrax-m300-drukarka-3d/",
+            "https://botland.com.pl/index.php?controller=attachment&id_attachment=3258",
+            "https://www.manualslib.com/manual/1722325/Zortrax-M300-Dual.html",
+            "https://archive.org/",
+            "https://www.cloudflare.com/",
+          ]
+          def test(u):
+            p=subprocess.run(["curl","-L","-I","-sS","--max-time","10","-o","/dev/null","-w","status=%{http_code} mime=%{content_type} ip=%{remote_ip}",u],capture_output=True,text=True,timeout=13)
+            return f"{u} -> {p.stdout} stderr={p.stderr[-180:]}"
+          with concurrent.futures.ThreadPoolExecutor(max_workers=12) as pool:
+            for r in pool.map(test,urls):print(r,flush=True)
+          PY
