@@ -1,0 +1,44 @@
+name: Package Zortrax M300 Dual Inventure manuals
+on:
+  push:
+    branches:
+      - docs-zortrax-manuals-20261109
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  manuals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original PDF manuals and convert selected official support pages
+        run: python3 tools/zortrax_manual_pdf_download_20261109.py
+      - name: Publish M300 classic package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_M300_Classic_Instrukcje_PDF
+          path: build/M300/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish M300 Dual package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_M300_Dual_Instrukcje_PDF
+          path: build/M300_Dual/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish Inventure package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_Inventure_Instrukcje_PDF
+          path: build/Inventure/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Publish all-in-one ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_M300_M300Dual_Inventure_Wszystkie_Instrukcje_PDF
+          path: build/
+          if-no-files-found: error
+          retention-days: 14
