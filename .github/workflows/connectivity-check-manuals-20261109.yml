@@ -28,6 +28,14 @@ jobs:
             "https://www.manualslib.com/manual/1722325/Zortrax-M300-Dual.html",
             "https://archive.org/",
             "https://www.cloudflare.com/",
+            "https://manualzz.com/doc/76712078/zortrax-inventure-user-guide",
+            "https://web.archive.org/",
+            "https://sc-journal.com/device/zortrax/inventure/",
+            "https://www.instrukcjaobslugi.org/zortrax/inventure",
+            "https://www.scribd.com/document/786347552/instrukcja-obslugi-zortrax-seriam-26082018",
+            "https://www.google.com/url?q=https%3A%2F%2Fsupport.zortrax.com%2Fwp-content%2Fuploads%2F2020%2F11%2Finstrukcja_obslugi_zortrax_seriam_26082018.pdf",
+            "https://web.archive.org/web/20230101000000id_/https://support.zortrax.com/wp-content/uploads/2020/11/instrukcja_obslugi_zortrax_seriam_26082018.pdf",
+            "https://botland.com.pl/index.php?controller=attachment&id_attachment=3256",
           ]
           def test(u):
             p=subprocess.run(["curl","-L","-I","-sS","--max-time","10","-o","/dev/null","-w","status=%{http_code} mime=%{content_type} ip=%{remote_ip}",u],capture_output=True,text=True,timeout=13)
