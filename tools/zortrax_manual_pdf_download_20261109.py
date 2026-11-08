@@ -27,6 +27,8 @@ DOCS = {
         ("Serwis_M300_Dual_Konserwacja_EN.pdf",f"{BASE}/pdf/create/steps.php?id=27014","PDF z bazy wiedzy producenta"),
     ],
     "Inventure": [
+        ("Inventure_Instrukcja_EN_2021_Archiwum_Audentia.pdf","https://www.audentia-gestion.fr/Zortrax/PDF/user_guide_zortrax_inventure_2021.03.12.pdf","Kopia oryginalnej instrukcji producenta"),
+        ("Inventure_Instrukcja_PL_2021.pdf",f"{BASE}/wp-content/uploads/2022/01/instrukcja_obslugi_inventure_2021.03.30.pdf","Podrecznik producenta"),
         ("Inventure_Konserwacja_JDM3D_EN.pdf","https://jdm3d.pl/wp-content/uploads/2020/02/ZORTRAX_Support_Center_inventure-maintenance-guide.pdf","Kopia PDF instrukcji serwisowej producenta w JDM3D"),
         ("Instrukcja_Inventure_PL_2020.pdf",f"{BASE}/wp-content/uploads/2020/11/instrukcja_obslugi_inventure_14102020.pdf","podrecznik producenta"),
         ("Instrukcja_Inventure_EN_2020.pdf",f"{BASE}/wp-content/uploads/2020/11/user_guide_zortrax_inventure_14102020.pdf","podrecznik producenta"),
