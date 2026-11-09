@@ -1,0 +1,36 @@
+name: Package official Zortrax disassembly and replacement guides
+on:
+  push:
+    branches: [docs-zortrax-manuals-20261109]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  service:
+    runs-on: ubuntu-latest
+    timeout-minutes: 23
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original illustrated service instructions from Internet Archive
+        run: python3 tools/zortrax_service_pdf_download_20261109.py
+      - name: Publish M300 Classic repair PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_M300_Classic_Serwis_PDF
+          path: service_downloads/M300/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Publish M300 Dual repair PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_M300_Dual_Serwis_PDF
+          path: service_downloads/M300_Dual/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Publish Inventure repair PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_Inventure_Serwis_PDF
+          path: service_downloads/Inventure/
+          retention-days: 14
+          if-no-files-found: error
