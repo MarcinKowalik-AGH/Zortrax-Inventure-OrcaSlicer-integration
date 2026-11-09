@@ -1,0 +1,33 @@
+name: Service PDF source discovery test
+on:
+  push:
+    branches: [docs-zortrax-manuals-20261109]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Inspect Wayback HTML and alternate page mirrors
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures,requests,re
+          targets=[
+            "https://web.archive.org/web/20261108000000id_/https://support.zortrax.com/hotend-replacement/",
+            "https://web.archive.org/web/20230101000000id_/https://support.zortrax.com/extruder-replacement/",
+            "https://r.jina.ai/https://support.zortrax.com/hotend-replacement/",
+            "https://www.google.com/search?q=site%3Asupport.zortrax.com%2Fhotend-replacement%2F",
+            "https://web.archive.org/web/20261108000000id_/https://support.zortrax.com/pdf/create/steps.php?id=15379",
+          ]
+          def run(u):
+            try:
+              r=requests.get(u,timeout=24,headers={"User-Agent":"Mozilla/5.0"})
+              s=r.content[:1000000]
+              ids=set(re.findall(rb"pdf/create/steps\.php\?id=(\d+)",s))
+              return dict(url=u,status=r.status_code,size=len(r.content),type=r.headers.get("content-type"),pdf_ids=[v.decode() for v in ids],snippet=s[:100].decode("utf8","replace"))
+            except Exception as ex:return dict(url=u,error=str(ex))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
+            for x in pool.map(run,targets):print(x,flush=True)
+          PY
