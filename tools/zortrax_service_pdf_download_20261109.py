@@ -53,6 +53,8 @@ MANUALS = {
  ("09_Konserwacja_calej_drukarki.pdf","inventure-maintenance-guide",16982,"Konserwacja"),
  ]
 }
+# Prioritize limited online archive access for the models with no offline repair PDFs.
+MANUALS = {model: MANUALS[model] for model in ("Inventure","M300_Dual","M300")}
 ROOT=Path("service_downloads"); ROOT.mkdir(exist_ok=True)
 for model in MANUALS: (ROOT/model).mkdir(parents=True,exist_ok=True)
 HEADERS={"User-Agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/125 Safari/537.36","Accept":"application/pdf,*/*","Accept-Encoding":"gzip, deflate"}
