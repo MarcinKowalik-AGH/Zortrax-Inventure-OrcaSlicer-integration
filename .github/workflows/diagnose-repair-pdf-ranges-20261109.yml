@@ -1,0 +1,33 @@
+name: Diagnose archived repair PDF range support
+on:
+  push:
+    branches: [docs-zortrax-manuals-20261109]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Probe available PDF ranges and partial archive captures
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import requests,concurrent.futures
+          ids=[27120,30823,15379,15818,17672,13451]
+          def probe(id):
+            base=f"https://web.archive.org/web/20261108000000id_/https://support.zortrax.com/pdf/create/steps.php?id={id}"
+            out=[]
+            for rng in [None,'bytes=1048576-1049600']:
+              try:
+                headers={"User-Agent":"Mozilla/5.0"}
+                if rng: headers['Range']=rng
+                with requests.get(base,headers=headers,timeout=20,stream=True) as r:
+                  data=next(r.iter_content(chunk_size=4096),b'')
+                  out.append({'range_request':rng,'status':r.status_code,'len':r.headers.get('Content-Length'),'content_range':r.headers.get('Content-Range'),'accept_ranges':r.headers.get('Accept-Ranges'),'type':r.headers.get('Content-Type'),'head':str(data[:25])})
+              except Exception as e:
+                out.append({'range_request':rng,'error':str(e)[:100]})
+            return {'pdf_id':id,'results':out}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=2) as ex:
+            for x in ex.map(probe,ids):print(x,flush=True)
+          PY
