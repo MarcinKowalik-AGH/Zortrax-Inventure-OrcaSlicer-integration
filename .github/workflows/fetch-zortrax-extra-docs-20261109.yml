@@ -1,0 +1,25 @@
+name: Fetch additional service PDF mirrors
+on:
+  push:
+    branches:
+      - docs-extra-pdf-retrieval-20261109
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and validate additional manufacturer PDF manuals
+        run: |
+          python3 -m pip install --quiet requests
+          python3 tools/extra_zortrax_docs_retrieval_20261109.py
+      - name: Package downloaded PDFs and failure manifest for offline use
+        uses: actions/upload-artifact@v4
+        with:
+          name: Zortrax_Dodatkowe_ManualsPlus_ManualsLib_Archiwum_PDF
+          path: extra_zortrax_pdf/
+          if-no-files-found: error
+          retention-days: 7
